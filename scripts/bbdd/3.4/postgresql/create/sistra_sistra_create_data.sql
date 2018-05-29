@@ -226,18 +226,20 @@ INSERT INTO str_orgres (org_codigo, org_desc) VALUES (1, 'GE-Genérico');
 -- Data for Name: str_domin; Type: TABLE DATA; Schema: public; Owner: sistra
 --
 
-INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (1, 'GESACARBUA', 'S', 'es.caib.sistra.db', 'select ''1'' codigo, null parent, ''Unidad Test'' descripcion from dual', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Arbol unidadades administrativas', NULL, NULL);
-INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (2, 'GESACUADES', 'S', 'es.caib.sistra.db', 'SELECT  ''1'' CODIGO,''Unidad Test'' DESCRIPCION  FROM dual WHERE ''XX'' <> ?', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Descripción de unidad administrativa. Parametrizado por código unidad.', NULL, NULL);
-INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (3, 'GESACUNADM', 'S', 'es.caib.sistra.db', 'SELECT  ''1'' CODIGO,''Unidad Test'' DESCRIPCION  FROM dual', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Lista de unidades administrativas', NULL, NULL);
+INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (1, 'GESACARBUA', 'S', 'es.caib.sistra.db', 'select ''1'' codigo, null parent, ''Unidad Test'' descripcion', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Arbol unidadades administrativas', NULL, NULL);
+INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (2, 'GESACUADES', 'S', 'es.caib.sistra.db', 'SELECT  ''1'' CODIGO,''Unidad Test'' DESCRIPCION  WHERE ''XX'' <> ?', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Descripción de unidad administrativa. Parametrizado por código unidad.', NULL, NULL);
+INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (3, 'GESACUNADM', 'S', 'es.caib.sistra.db', 'SELECT  ''1'' CODIGO,''Unidad Test'' DESCRIPCION', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Lista de unidades administrativas', NULL, NULL);
 INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (4, 'GERDSMODE', 'S', 'es.caib.redose.db', 'SELECT 	MOD_MODELO CODIGO,MOD_MODELO || '' - '' || MOD_NOMBRE DESCRIPCION FROM RDS_MODELO ORDER BY 1', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Lista de modelos de documentos del RDS', NULL, NULL);
 INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (5, 'GERDSVERS', 'S', 'es.caib.redose.db', 'SELECT RDS_VERS.VER_VERSIO CODIGO, TO_CHAR(RDS_VERS.VER_VERSIO) DESCRIPCION FROM RDS_VERS,RDS_MODELO WHERE RDS_MODELO.MOD_CODIGO =  RDS_VERS.VER_CODMOD AND RDS_MODELO.MOD_MODELO = ? ORDER BY 1', NULL, 'L', 'N', NULL, NULL, 'N', 1, 'Lista de versiones de un modelo de documento del RDS. Parametrizado por código modelo.', NULL, NULL);
 INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (6, 'GEFORMMODE', 'S', 'es.caib.rolforms.db', 'SELECT DISTINCT RFR_FORMUL.FOR_MODELO CODIGO,RFR_FORMUL.FOR_MODELO || '' - '' || RFR_TRAFOR.TRF_TITULO DESCRIPCION
 FROM RFR_FORMUL,RFR_TRAFOR
 WHERE RFR_TRAFOR.TRF_CODFOR = RFR_FORMUL.FOR_CODI AND RFR_TRAFOR.TRF_CODIDI = ''es''
 ORDER BY 1', NULL, 'R', 'N', NULL, NULL, 'N', 1, 'Lista de modelos de formularios', NULL, NULL);
-INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc, dom_wsver, dom_wssoa) VALUES (7, 'GEFORMMOVE', 'S', 'es.caib.rolforms.db', 'SELECT RFR_FORMUL.FOR_MODELO MODELO,
+INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_jndi, dom_ejbrem, dom_ejbstd, dom_usr, dom_pwd, dom_cache, dom_codorg, dom_desc,
+dom_wsver, dom_wssoa) VALUES (7, 'GEFORMMOVE', 'S', 'es.caib.rolforms.db',
+'SELECT RFR_FORMUL.FOR_MODELO MODELO,
 	   RFR_FORMUL.FOR_MODELO || '' - '' || RFR_TRAFOR.TRF_TITULO DESCRIPCION,
-	   RFR_FORMUL.FOR_VERSIO VERSION	   	   
+	   RFR_FORMUL.FOR_VERSIO as VERSION
 FROM RFR_FORMUL,RFR_TRAFOR
 WHERE RFR_TRAFOR.TRF_CODFOR = RFR_FORMUL.FOR_CODI AND RFR_TRAFOR.TRF_CODIDI = ''es''
 ORDER BY 1,3', NULL, 'R', 'N', NULL, NULL, 'N', 1, 'Arbol de formularios y versiones', NULL, NULL);

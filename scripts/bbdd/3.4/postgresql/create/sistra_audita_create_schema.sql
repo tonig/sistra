@@ -552,5 +552,5 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 
 -- V3.4.2
 
-alter table AUD_AUDIT ALTER COLUMN AUD_NIF character varying(50);
+alter table AUD_AUDIT ALTER COLUMN AUD_NIF TYPE character varying(50);
 

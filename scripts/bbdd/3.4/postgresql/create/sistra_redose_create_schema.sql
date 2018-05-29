@@ -317,7 +317,7 @@ CREATE TABLE rds_ficher (
 -- Name: TABLE rds_ficher; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE rds_ficher IS 'UBICACIÓN EN BD DE REPOSITORIO DE FICHEROS';
+COMMENT ON TABLE rds_ficher IS 'UBICACIï¿½N EN BD DE REPOSITORIO DE FICHEROS';
 
 
 --
@@ -1905,5 +1905,4 @@ alter table RDS_TABCSV
    
 -- V3.4.2
    
-alter table RDS_DOCUM ALTER COLUMN DOC_NIF character varying(50);
-
+alter table RDS_DOCUM ALTER COLUMN DOC_NIF TYPE character varying(50);

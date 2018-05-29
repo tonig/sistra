@@ -1754,7 +1754,7 @@ comment on column BTE_PROAPL.TAP_IDEPEX is
 alter table BTE_PROAPL add TAP_AVIINC character varying(255);
 
 comment on column BTE_PROAPL.TAP_AVIINC is
-'Email para envío de incidencias';
+'Email para envï¿½o de incidencias';
 
 -- V3.3.4
 alter table BTE_PROAPL add TAP_IDEENT character varying(100);
@@ -1789,9 +1789,9 @@ alter table BTE_PROAPL alter column TAP_IDEENT set not null;
 
 -- V3.4.2
 
-alter table BTE_TRAMIT ALTER COLUMN TRA_NIFRTE character varying(50);
-alter table BTE_TRAMIT ALTER COLUMN TRA_NIFRDO character varying(50);
-alter table BTE_TRAMIT ALTER COLUMN TRA_NIFDLG character varying(50);
+alter table BTE_TRAMIT ALTER COLUMN TRA_NIFRTE TYPE character varying(50);
+alter table BTE_TRAMIT ALTER COLUMN TRA_NIFRDO TYPE character varying(50);
+alter table BTE_TRAMIT ALTER COLUMN TRA_NIFDLG TYPE character varying(50);
 
 create table BTE_IDIOMA  (
    IDI_CODIGO           character varying(2)                     not null,
@@ -1811,16 +1811,16 @@ create table BTE_TRAPRO  (
 );
 
 comment on table BTE_TRAPRO is
-'Traducción de Procedimientos';
+'Traducciï¿½n de Procedimientos';
 
 comment on column BTE_TRAPRO.PRO_IDEPRO is
-'Código trámite';
+'Cï¿½digo trï¿½mite';
 
 comment on column BTE_TRAPRO.PRO_CODIDI is
-'Código idioma';
+'Cï¿½digo idioma';
 
 comment on column BTE_TRAPRO.PRO_DESC is
-'Descripción del trámite';
+'Descripciï¿½n del trï¿½mite';
 
 alter table BTE_TRAPRO
    add constraint BTE_PRO_PK primary key (PRO_IDEPRO, PRO_CODIDI);
