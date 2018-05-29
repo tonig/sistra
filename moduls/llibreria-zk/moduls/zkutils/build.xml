@@ -25,7 +25,7 @@
 	<property name="distribucion.dir" location="${home.dir}/../../product"/>
 
     <path id="jar.class.path">  
-    	<fileset dir="${lib.dir}/ZK">
+    	<fileset dir="${lib.dir}/zk">
 	    	<include name="*.jar"/>    		
     	</fileset>
     	<fileset dir="${lib.dir}">

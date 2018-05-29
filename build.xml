@@ -29,7 +29,7 @@
 </target>
 
 <target name="propagate">
-	<ant dir="moduls/llibreria-configuracionutil" target="${task}" inheritall="false"/>
+	<ant dir="moduls/llibreria-configuracionUtil" target="${task}" inheritall="false"/>
 	<ant dir="moduls/llibreria-dbutils" target="${task}" inheritall="false"/>
 	<ant dir="moduls/llibreria-graficos" target="${task}" inheritall="false"/>
 	<ant dir="moduls/llibreria-pdf" target="${task}" inheritall="false"/>
