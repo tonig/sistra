@@ -518,7 +518,7 @@ public abstract class RdsAdminFacadeEJB extends HibernateEJB {
     		String sqlSelectCount = "select count(d.codigo) ";
     		String sqlSelectList = "select d.codigo ";
 			String sqlWhere = " FROM Documento AS d WHERE d.ubicacion.codigo = :ubicacion";
-			String sqlOrderBy = " order by d.fecha asc";
+			String sqlOrderBy = count ? "" : " order by d.fecha asc";
 			    	    		
 			if (fechaDesde != null) {
 				sqlWhere += " and d.fecha >= :fechaDesde";    			
