@@ -138,4 +138,13 @@ public class PluginRegtelMock implements PluginRegistroIntf{
 		return "OFICINA " + oficina;
 	}
 
+    @Override
+    public byte[] obtenerJustificanteRegistroEntrada(String entidad, String numeroRegistro, Date fechaRegistro) throws Exception {
+        return new byte[0];
+    }
+
+    @Override
+    public byte[] obtenerJustificanteRegistroSalida(String entidad, String numeroRegistro, Date fechaRegistro) throws Exception {
+        return new byte[0];
+    }
 }
