@@ -29,7 +29,7 @@ CREATE TABLE str_datjus (
 -- Name: TABLE str_datjus; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_datjus IS 'Datos para generar el justificante. A partir de estos datos se generar√° la parte especifica de datos particulares del tr√°mite en el asiento del tr√°mite.';
+COMMENT ON TABLE str_datjus IS 'Datos para generar el justificante. A partir de estos datos se generar· la parte especifica de datos particulares del tr·mite en el asiento del tr·mite.';
 
 
 --
@@ -38,7 +38,7 @@ COMMENT ON TABLE str_datjus IS 'Datos para generar el justificante. A partir de 
 -- Name: COLUMN str_datjus.djs_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_datjus.djs_codigo IS 'C√≥digo';
+COMMENT ON COLUMN str_datjus.djs_codigo IS 'CÛdigo';
 
 
 --
@@ -47,7 +47,7 @@ COMMENT ON COLUMN str_datjus.djs_codigo IS 'C√≥digo';
 -- Name: COLUMN str_datjus.djs_codetn; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_datjus.djs_codetn IS 'C√≥digo especificaciones';
+COMMENT ON COLUMN str_datjus.djs_codetn IS 'CÛdigo especificaciones';
 
 
 --
@@ -83,7 +83,7 @@ COMMENT ON COLUMN str_datjus.djs_campo IS 'Para tipo campo indica referencia al 
 -- Name: COLUMN str_datjus.djs_camps; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_datjus.djs_camps IS 'Para tipo campo indica permite establecer el valor mediante un script (tendr√° prereferencia DJS_CAMPO)';
+COMMENT ON COLUMN str_datjus.djs_camps IS 'Para tipo campo indica permite establecer el valor mediante un script (tendr· prereferencia DJS_CAMPO)';
 
 
 --
@@ -92,7 +92,7 @@ COMMENT ON COLUMN str_datjus.djs_camps IS 'Para tipo campo indica permite establ
 -- Name: COLUMN str_datjus.djs_visible; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_datjus.djs_visible IS 'Permite configurar si el elemento ser√° visible en funci√≥n de datos del formulario';
+COMMENT ON COLUMN str_datjus.djs_visible IS 'Permite configurar si el elemento ser· visible en funciÛn de datos del formulario';
 
 
 --
@@ -177,7 +177,7 @@ CREATE TABLE str_docniv (
 -- Name: TABLE str_docniv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_docniv IS 'Especificaciones documentos por nivel de autenticaci√≥n';
+COMMENT ON TABLE str_docniv IS 'Especificaciones documentos por nivel de autenticaciÛn';
 
 
 --
@@ -186,7 +186,7 @@ COMMENT ON TABLE str_docniv IS 'Especificaciones documentos por nivel de autenti
 -- Name: COLUMN str_docniv.dnv_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_codigo IS 'C√≥digo interno';
+COMMENT ON COLUMN str_docniv.dnv_codigo IS 'CÛdigo interno';
 
 
 --
@@ -195,7 +195,7 @@ COMMENT ON COLUMN str_docniv.dnv_codigo IS 'C√≥digo interno';
 -- Name: COLUMN str_docniv.dnv_coddoc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_coddoc IS 'C√≥digo interno documento';
+COMMENT ON COLUMN str_docniv.dnv_coddoc IS 'CÛdigo interno documento';
 
 
 --
@@ -204,7 +204,7 @@ COMMENT ON COLUMN str_docniv.dnv_coddoc IS 'C√≥digo interno documento';
 -- Name: COLUMN str_docniv.dnv_nivaut; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_nivaut IS 'Nivel autenticaci√≥n: Certificado (C) / Ususario-pass (U) / An√≥nimo (A)';
+COMMENT ON COLUMN str_docniv.dnv_nivaut IS 'Nivel autenticaciÛn: Certificado (C) / Ususario-pass (U) / AnÛnimo (A)';
 
 
 --
@@ -213,7 +213,7 @@ COMMENT ON COLUMN str_docniv.dnv_nivaut IS 'Nivel autenticaci√≥n: Certificado (C
 -- Name: COLUMN str_docniv.dnv_versio; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_versio IS 'Versi√≥n documento';
+COMMENT ON COLUMN str_docniv.dnv_versio IS 'VersiÛn documento';
 
 
 --
@@ -222,7 +222,7 @@ COMMENT ON COLUMN str_docniv.dnv_versio IS 'Versi√≥n documento';
 -- Name: COLUMN str_docniv.dnv_obliga; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_obliga IS 'Especificaci√≥n obligatoriedad: Obligatorio (S) / Opcional (N) / Dependiente seg√∫n script (D).';
+COMMENT ON COLUMN str_docniv.dnv_obliga IS 'EspecificaciÛn obligatoriedad: Obligatorio (S) / Opcional (N) / Dependiente seg˙n script (D).';
 
 
 --
@@ -240,7 +240,7 @@ COMMENT ON COLUMN str_docniv.dnv_oblscr IS 'Script para indicar la obligatorieda
 -- Name: COLUMN str_docniv.dnv_firmar; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_firmar IS 'Indica si el documento se debe firmar digitalmente individualmente. En el script se puede indicar quien debe firmar el documento, si no existe script o si devuelve vac√≠o ser√° el iniciador del tr√°mite.No se puede indicar que debe firmarse y que el documento sea presencial.';
+COMMENT ON COLUMN str_docniv.dnv_firmar IS 'Indica si el documento se debe firmar digitalmente individualmente. En el script se puede indicar quien debe firmar el documento, si no existe script o si devuelve vacÌo ser· el iniciador del tr·mite.No se puede indicar que debe firmarse y que el documento sea presencial.';
 
 
 --
@@ -294,7 +294,7 @@ COMMENT ON COLUMN str_docniv.dnv_forver IS 'Para Formulario: indica enlace a For
 -- Name: COLUMN str_docniv.dnv_forcon; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_forcon IS 'Para Formulario: script para establecer configuraci√≥n formulario (campos solo lectura,etc)';
+COMMENT ON COLUMN str_docniv.dnv_forcon IS 'Para Formulario: script para establecer configuraciÛn formulario (campos solo lectura,etc)';
 
 
 --
@@ -303,7 +303,7 @@ COMMENT ON COLUMN str_docniv.dnv_forcon IS 'Para Formulario: script para estable
 -- Name: COLUMN str_docniv.dnv_forpos; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_forpos IS 'Para Formulario: validaci√≥n datos formularios tras volver de Forms';
+COMMENT ON COLUMN str_docniv.dnv_forpos IS 'Para Formulario: validaciÛn datos formularios tras volver de Forms';
 
 
 --
@@ -312,7 +312,7 @@ COMMENT ON COLUMN str_docniv.dnv_forpos IS 'Para Formulario: validaci√≥n datos f
 -- Name: COLUMN str_docniv.dnv_formod; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_formod IS 'Para Formulario: script que permite modificar datos de otros formularios tras el salvado (no debe haber errores de validaci√≥n)';
+COMMENT ON COLUMN str_docniv.dnv_formod IS 'Para Formulario: script que permite modificar datos de otros formularios tras el salvado (no debe haber errores de validaciÛn)';
 
 
 --
@@ -321,7 +321,7 @@ COMMENT ON COLUMN str_docniv.dnv_formod IS 'Para Formulario: script que permite 
 -- Name: COLUMN str_docniv.dnv_forpla; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_forpla IS 'Para Formulario: script para indicar plantilla de visualizaci√≥n (si no se especifica script se utiliza la por defecto)';
+COMMENT ON COLUMN str_docniv.dnv_forpla IS 'Para Formulario: script para indicar plantilla de visualizaciÛn (si no se especifica script se utiliza la por defecto)';
 
 
 --
@@ -348,7 +348,7 @@ COMMENT ON COLUMN str_docniv.dnv_pagtip IS 'Para Pagos: indica el tipo de pago q
 -- Name: COLUMN str_docniv.dnv_flutra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_flutra IS 'Indica usuario que debe aportar este documento (solo para autenticado y si esta habilitado el flujo de tramitaci√≥n). Si es nulo o devuelve vac√≠o debe aportarlo qui√©n inicia el tr√°mite.';
+COMMENT ON COLUMN str_docniv.dnv_flutra IS 'Indica usuario que debe aportar este documento (solo para autenticado y si esta habilitado el flujo de tramitaciÛn). Si es nulo o devuelve vacÌo debe aportarlo quiÈn inicia el tr·mite.';
 
 
 --
@@ -357,7 +357,7 @@ COMMENT ON COLUMN str_docniv.dnv_flutra IS 'Indica usuario que debe aportar este
 -- Name: COLUMN str_docniv.dnv_fircty; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docniv.dnv_fircty IS 'Indica el content type del documento a firmar. Si no se especifica se utilizar√° uno por defecto.';
+COMMENT ON COLUMN str_docniv.dnv_fircty IS 'Indica el content type del documento a firmar. Si no se especifica se utilizar· uno por defecto.';
 
 
 --
@@ -407,7 +407,7 @@ CREATE TABLE str_docum (
 -- Name: TABLE str_docum; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_docum IS 'Documentos del tr√°mite';
+COMMENT ON TABLE str_docum IS 'Documentos del tr·mite';
 
 
 --
@@ -416,7 +416,7 @@ COMMENT ON TABLE str_docum IS 'Documentos del tr√°mite';
 -- Name: COLUMN str_docum.doc_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_codigo IS 'C√≥digo interno documento';
+COMMENT ON COLUMN str_docum.doc_codigo IS 'CÛdigo interno documento';
 
 
 --
@@ -425,7 +425,7 @@ COMMENT ON COLUMN str_docum.doc_codigo IS 'C√≥digo interno documento';
 -- Name: COLUMN str_docum.doc_identi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_identi IS 'Identificador documento dentro del tr√°mite';
+COMMENT ON COLUMN str_docum.doc_identi IS 'Identificador documento dentro del tr·mite';
 
 
 --
@@ -443,7 +443,7 @@ COMMENT ON COLUMN str_docum.doc_tipo IS 'Tipo de documento: Formulario (F) / Ane
 -- Name: COLUMN str_docum.doc_orden; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_orden IS 'Orden de presentaci√≥n';
+COMMENT ON COLUMN str_docum.doc_orden IS 'Orden de presentaciÛn';
 
 
 --
@@ -452,7 +452,7 @@ COMMENT ON COLUMN str_docum.doc_orden IS 'Orden de presentaci√≥n';
 -- Name: COLUMN str_docum.doc_pad; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_pad IS 'Indica n√∫mero de documento equivalente en la PAD';
+COMMENT ON COLUMN str_docum.doc_pad IS 'Indica n˙mero de documento equivalente en la PAD';
 
 
 --
@@ -488,7 +488,7 @@ COMMENT ON COLUMN str_docum.doc_forjus IS 'Para Formulario: en caso de preregist
 -- Name: COLUMN str_docum.doc_aneext; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_aneext IS 'Para Anexos: lista de extensiones posibles separadas por ;. Lista vac√≠a implica que no hay restricciones.';
+COMMENT ON COLUMN str_docum.doc_aneext IS 'Para Anexos: lista de extensiones posibles separadas por ;. Lista vacÌa implica que no hay restricciones.';
 
 
 --
@@ -497,7 +497,7 @@ COMMENT ON COLUMN str_docum.doc_aneext IS 'Para Anexos: lista de extensiones pos
 -- Name: COLUMN str_docum.doc_anetam; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_anetam IS 'Para Anexos: tama√±o en Kb permitido';
+COMMENT ON COLUMN str_docum.doc_anetam IS 'Para Anexos: tamaÒo en Kb permitido';
 
 
 --
@@ -524,7 +524,7 @@ COMMENT ON COLUMN str_docum.doc_anedpl IS 'Para Anexos: Indica si se indica al u
 -- Name: COLUMN str_docum.doc_anetel; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_anetel IS 'Para Anexos: Indica si se debe anexar telem√°ticamente';
+COMMENT ON COLUMN str_docum.doc_anetel IS 'Para Anexos: Indica si se debe anexar telem·ticamente';
 
 
 --
@@ -542,7 +542,7 @@ COMMENT ON COLUMN str_docum.doc_anecom IS 'Para Anexos: indica si se debe indica
 -- Name: COLUMN str_docum.doc_anefot; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_anefot IS 'Para Anexos: Indica si para un documento se deber√° presentar una fotocopia';
+COMMENT ON COLUMN str_docum.doc_anefot IS 'Para Anexos: Indica si para un documento se deber· presentar una fotocopia';
 
 
 --
@@ -551,7 +551,7 @@ COMMENT ON COLUMN str_docum.doc_anefot IS 'Para Anexos: Indica si para un docume
 -- Name: COLUMN str_docum.doc_anegco; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_anegco IS 'Para Anexos: Indica si el documento es Gen√©rico. Si es gen√©rico se permitir√° indicar al usuario indicar una descripci√≥n y anexar tantos documentos como se indique en el campo DOC_GCOMAX';
+COMMENT ON COLUMN str_docum.doc_anegco IS 'Para Anexos: Indica si el documento es GenÈrico. Si es genÈrico se permitir· indicar al usuario indicar una descripciÛn y anexar tantos documentos como se indique en el campo DOC_GCOMAX';
 
 
 --
@@ -560,7 +560,7 @@ COMMENT ON COLUMN str_docum.doc_anegco IS 'Para Anexos: Indica si el documento e
 -- Name: COLUMN str_docum.doc_anegma; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_docum.doc_anegma IS 'Para Anexos: Para documento Gen√©rico indica el n√∫mero m√°ximo de instancias de documentos gen√©ricos que se pueden anexar. Si se marca el documento como obligatorio deber√°n anexarse este n√∫mero de instancias.';
+COMMENT ON COLUMN str_docum.doc_anegma IS 'Para Anexos: Para documento GenÈrico indica el n˙mero m·ximo de instancias de documentos genÈricos que se pueden anexar. Si se marca el documento como obligatorio deber·n anexarse este n˙mero de instancias.';
 
 
 --
@@ -623,7 +623,7 @@ COMMENT ON TABLE str_domin IS 'Dominios';
 -- Name: COLUMN str_domin.dom_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_domin.dom_codigo IS 'C√≥digo';
+COMMENT ON COLUMN str_domin.dom_codigo IS 'CÛdigo';
 
 
 --
@@ -650,7 +650,7 @@ COMMENT ON COLUMN str_domin.dom_tipo IS 'Tipo de dominio: Sql (S) / Ejb (E) / We
 -- Name: COLUMN str_domin.dom_url; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_domin.dom_url IS 'Indica seg√∫n tipo de dominio:
+COMMENT ON COLUMN str_domin.dom_url IS 'Indica seg˙n tipo de dominio:
 - Ejb: JNDI ejb que resuelve dominio
 - Sql: JNDI datasource origen de datos
 - Webservice: Url webservice';
@@ -690,9 +690,9 @@ COMMENT ON COLUMN str_domin.dom_ejbrem IS 'Para tipo dominio Ejb indica si el ej
 --
 
 COMMENT ON COLUMN str_domin.dom_ejbstd IS 'Para tipo dominio Ejb/Ws indica si se debe realizar:
- - N: autenticaci√≥n impl√≠cita de forma que el contenedor EJBs traspasa autenticacion
- - S: expl√≠cita a traves de usuario/password
- - C: expl√≠cita a trav√©s plugin autenticaci√≥n del organismo';
+ - N: autenticaciÛn implÌcita de forma que el contenedor EJBs traspasa autenticacion
+ - S: explÌcita a traves de usuario/password
+ - C: explÌcita a travÈs plugin autenticaciÛn del organismo';
 
 
 --
@@ -825,7 +825,7 @@ CREATE TABLE str_espniv (
 -- Name: TABLE str_espniv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_espniv IS 'Especificaci√≥n par√°metros tr√°mite que se especifican por defecto y pueden ser sobreescritas seg√∫n nivel autenticaci√≥n.';
+COMMENT ON TABLE str_espniv IS 'EspecificaciÛn par·metros tr·mite que se especifican por defecto y pueden ser sobreescritas seg˙n nivel autenticaciÛn.';
 
 
 --
@@ -834,7 +834,7 @@ COMMENT ON TABLE str_espniv IS 'Especificaci√≥n par√°metros tr√°mite que se espe
 -- Name: COLUMN str_espniv.etn_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_codigo IS 'C√≥digo';
+COMMENT ON COLUMN str_espniv.etn_codigo IS 'CÛdigo';
 
 
 --
@@ -843,7 +843,7 @@ COMMENT ON COLUMN str_espniv.etn_codigo IS 'C√≥digo';
 -- Name: COLUMN str_espniv.etn_activo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_activo IS 'Indica si el tr√°mite esta activo';
+COMMENT ON COLUMN str_espniv.etn_activo IS 'Indica si el tr·mite esta activo';
 
 
 --
@@ -852,7 +852,7 @@ COMMENT ON COLUMN str_espniv.etn_activo IS 'Indica si el tr√°mite esta activo';
 -- Name: COLUMN str_espniv.etn_valini; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_valini IS 'Validaci√≥n al iniciar tr√°mite. Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_valini IS 'ValidaciÛn al iniciar tr·mite. Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -861,7 +861,7 @@ COMMENT ON COLUMN str_espniv.etn_valini IS 'Validaci√≥n al iniciar tr√°mite. Pue
 -- Name: COLUMN str_espniv.etn_diaper; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_diaper IS 'D√≠as persistencia. Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_diaper IS 'DÌas persistencia. Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -870,7 +870,7 @@ COMMENT ON COLUMN str_espniv.etn_diaper IS 'D√≠as persistencia. Puede ser sobree
 -- Name: COLUMN str_espniv.etn_codprv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_codprv IS 'Script para indicar el c√≥digo de la provincia. Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_codprv IS 'Script para indicar el cÛdigo de la provincia. Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -879,7 +879,7 @@ COMMENT ON COLUMN str_espniv.etn_codprv IS 'Script para indicar el c√≥digo de la
 -- Name: COLUMN str_espniv.etn_codloc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_codloc IS 'Script para indicar el c√≥digo de la localidad. Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_codloc IS 'Script para indicar el cÛdigo de la localidad. Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -888,7 +888,7 @@ COMMENT ON COLUMN str_espniv.etn_codloc IS 'Script para indicar el c√≥digo de la
 -- Name: COLUMN str_espniv.etn_codpai; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_codpai IS 'Script para indicar el c√≥digo del pa√≠s. Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_codpai IS 'Script para indicar el cÛdigo del paÌs. Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -897,7 +897,7 @@ COMMENT ON COLUMN str_espniv.etn_codpai IS 'Script para indicar el c√≥digo del p
 -- Name: COLUMN str_espniv.etn_rtenif; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_rtenif IS 'Script que indica el NIF representante (Obligatorio cuando tr√°mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_rtenif IS 'Script que indica el NIF representante (Obligatorio cuando tr·mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -906,7 +906,7 @@ COMMENT ON COLUMN str_espniv.etn_rtenif IS 'Script que indica el NIF representan
 -- Name: COLUMN str_espniv.etn_rtenom; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_rtenom IS 'Script que indica el Nombre representante (Obligatorio cuando tr√°mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_rtenom IS 'Script que indica el Nombre representante (Obligatorio cuando tr·mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -915,7 +915,7 @@ COMMENT ON COLUMN str_espniv.etn_rtenom IS 'Script que indica el Nombre represen
 -- Name: COLUMN str_espniv.etn_rdonif; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_rdonif IS 'Script que indica NIF representado (Obligatorio cuando tr√°mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_rdonif IS 'Script que indica NIF representado (Obligatorio cuando tr·mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -924,7 +924,7 @@ COMMENT ON COLUMN str_espniv.etn_rdonif IS 'Script que indica NIF representado (
 -- Name: COLUMN str_espniv.etn_rdonom; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_rdonom IS 'Script que indica Nombre representado (Obligatorio cuando tr√°mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_rdonom IS 'Script que indica Nombre representado (Obligatorio cuando tr·mite no es de tipo consulta). Puede ser sobreescrita por nivel autenticaciÛn';
 
 
 --
@@ -933,7 +933,7 @@ COMMENT ON COLUMN str_espniv.etn_rdonom IS 'Script que indica Nombre representad
 -- Name: COLUMN str_espniv.etn_diapre; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_diapre IS 'Dias de prerregistro. Puede ser sobreescrita por nivel de autenticaci√≥n. Junto a la fecha limite de entrega, indica hasta que fecha se pueden entregar los datos de un prerregistro o preenvio';
+COMMENT ON COLUMN str_espniv.etn_diapre IS 'Dias de prerregistro. Puede ser sobreescrita por nivel de autenticaciÛn. Junto a la fecha limite de entrega, indica hasta que fecha se pueden entregar los datos de un prerregistro o preenvio';
 
 
 --
@@ -942,7 +942,7 @@ COMMENT ON COLUMN str_espniv.etn_diapre IS 'Dias de prerregistro. Puede ser sobr
 -- Name: COLUMN str_espniv.etn_flutra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_flutra IS 'Indica si el tr√°mite permite flujo de tramitaci√≥n: permite que el tr√°mite se vaya remitiendo a diferentes usuarios para que sea completado (s√≥lo con autenticaci√≥n).';
+COMMENT ON COLUMN str_espniv.etn_flutra IS 'Indica si el tr·mite permite flujo de tramitaciÛn: permite que el tr·mite se vaya remitiendo a diferentes usuarios para que sea completado (sÛlo con autenticaciÛn).';
 
 
 --
@@ -951,7 +951,7 @@ COMMENT ON COLUMN str_espniv.etn_flutra IS 'Indica si el tr√°mite permite flujo 
 -- Name: COLUMN str_espniv.etn_urlfin; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_urlfin IS 'Establece url de finalizaci√≥n';
+COMMENT ON COLUMN str_espniv.etn_urlfin IS 'Establece url de finalizaciÛn';
 
 
 --
@@ -960,7 +960,7 @@ COMMENT ON COLUMN str_espniv.etn_urlfin IS 'Establece url de finalizaci√≥n';
 -- Name: COLUMN str_espniv.etn_avisms; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_avisms IS 'En caso de que esten habilitados los avisos para el expediente indicar√° el telefono para avisos SMS';
+COMMENT ON COLUMN str_espniv.etn_avisms IS 'En caso de que esten habilitados los avisos para el expediente indicar· el telefono para avisos SMS';
 
 
 --
@@ -969,7 +969,7 @@ COMMENT ON COLUMN str_espniv.etn_avisms IS 'En caso de que esten habilitados los
 -- Name: COLUMN str_espniv.etn_aviema; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_aviema IS 'En caso de que esten habilitados los avisos para el expediente indicar√° el email para avisos Email';
+COMMENT ON COLUMN str_espniv.etn_aviema IS 'En caso de que esten habilitados los avisos para el expediente indicar· el email para avisos Email';
 
 
 --
@@ -978,7 +978,7 @@ COMMENT ON COLUMN str_espniv.etn_aviema IS 'En caso de que esten habilitados los
 -- Name: COLUMN str_espniv.etn_nottel; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_nottel IS 'Indica si el tramite permite notificacion telematica: N: No permite /  S Si permite, el ciudadano elige / O: Obligatoria notificaci√≥n telem√°tica / X: No especificada';
+COMMENT ON COLUMN str_espniv.etn_nottel IS 'Indica si el tramite permite notificacion telematica: N: No permite /  S Si permite, el ciudadano elige / O: Obligatoria notificaciÛn telem·tica / X: No especificada';
 
 
 --
@@ -996,7 +996,7 @@ COMMENT ON COLUMN str_espniv.etn_chkenv IS 'Script para chequear antes de enviar
 -- Name: COLUMN str_espniv.etn_dsttra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_dsttra IS 'Script que permite cambiar din√°micamente la informaci√≥n del destinatario del tr√°mite (oficina registral, organo destino y unidad administrativa)';
+COMMENT ON COLUMN str_espniv.etn_dsttra IS 'Script que permite cambiar din·micamente la informaciÛn del destinatario del tr·mite (oficina registral, organo destino y unidad administrativa)';
 
 
 --
@@ -1023,7 +1023,7 @@ COMMENT ON COLUMN str_espniv.etn_jnonn IS 'Indica si se oculta el nif y nombre e
 -- Name: COLUMN str_espniv.etn_aletra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_espniv.etn_aletra IS 'Indica si se generan alertas de tramitacion (previas envio tramite): N: No permite /  S Si permite, el ciudadano elige / O: Obligatoria notificaci√≥n telem√°tica / X: No especificada';
+COMMENT ON COLUMN str_espniv.etn_aletra IS 'Indica si se generan alertas de tramitacion (previas envio tramite): N: No permite /  S Si permite, el ciudadano elige / O: Obligatoria notificaciÛn telem·tica / X: No especificada';
 
 
 --
@@ -1126,7 +1126,7 @@ CREATE TABLE str_grptra (
 -- Name: TABLE str_grptra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_grptra IS 'Tr√°mites a los que el grupo tiene acceso';
+COMMENT ON TABLE str_grptra IS 'Tr·mites a los que el grupo tiene acceso';
 
 
 --
@@ -1167,7 +1167,7 @@ CREATE TABLE str_grpusu (
 -- Name: TABLE str_grpusu; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_grpusu IS 'Asignaci√≥n de usuarios a grupos';
+COMMENT ON TABLE str_grpusu IS 'AsignaciÛn de usuarios a grupos';
 
 
 --
@@ -1218,7 +1218,7 @@ COMMENT ON TABLE str_grupos IS 'Grupos de usuarios para establecer permisos de a
 -- Name: COLUMN str_grupos.grp_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_grupos.grp_codigo IS 'C√≥digo grupo';
+COMMENT ON COLUMN str_grupos.grp_codigo IS 'CÛdigo grupo';
 
 
 --
@@ -1236,7 +1236,7 @@ COMMENT ON COLUMN str_grupos.grp_nombre IS 'Nombre grupo';
 -- Name: COLUMN str_grupos.grp_descp; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_grupos.grp_descp IS 'Descripci√≥n grupo';
+COMMENT ON COLUMN str_grupos.grp_descp IS 'DescripciÛn grupo';
 
 
 --
@@ -1378,7 +1378,7 @@ COMMENT ON COLUMN str_import.imp_codigo IS 'Identificador interno';
 -- Name: COLUMN str_import.imp_desc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_import.imp_desc IS 'Descripci√≥n cuaderno de carga';
+COMMENT ON COLUMN str_import.imp_desc IS 'DescripciÛn cuaderno de carga';
 
 
 --
@@ -1396,10 +1396,10 @@ COMMENT ON COLUMN str_import.imp_fecha IS 'Fecha/hora  alta cuaderno carga';
 -- Name: COLUMN str_import.imp_audita; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_import.imp_audita IS 'Indica si la importaci√≥n ha sido auditada por sistemas: Inicial (I) / No requiere auditoria (N) / Aceptada (S) / Pendiente (P) / Rechazada (R)
-Al insertar un cuaderno de carga estar√° en estado I.
-Una vez insertados todos los ficheros asociados se calcular√° autom√°ticamente el tipo, que quedar√° en N o P.
-Si queda en P posteriormente un auditor deber√° pasar al estado S o R.
+COMMENT ON COLUMN str_import.imp_audita IS 'Indica si la importaciÛn ha sido auditada por sistemas: Inicial (I) / No requiere auditoria (N) / Aceptada (S) / Pendiente (P) / Rechazada (R)
+Al insertar un cuaderno de carga estar· en estado I.
+Una vez insertados todos los ficheros asociados se calcular· autom·ticamente el tipo, que quedar· en N o P.
+Si queda en P posteriormente un auditor deber· pasar al estado S o R.
 ';
 
 
@@ -1527,7 +1527,7 @@ CREATE TABLE str_mentra (
 -- Name: TABLE str_mentra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_mentra IS 'Mensajes definidos para un tr√°mite que se podr√°n emplear en las validaciones para mostrar mensajes particularizados al usuario';
+COMMENT ON TABLE str_mentra IS 'Mensajes definidos para un tr·mite que se podr·n emplear en las validaciones para mostrar mensajes particularizados al usuario';
 
 
 --
@@ -1536,7 +1536,7 @@ COMMENT ON TABLE str_mentra IS 'Mensajes definidos para un tr√°mite que se podr√
 -- Name: COLUMN str_mentra.mtr_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_mentra.mtr_codigo IS 'C√≥digo interno mensaje';
+COMMENT ON COLUMN str_mentra.mtr_codigo IS 'CÛdigo interno mensaje';
 
 
 --
@@ -1545,7 +1545,7 @@ COMMENT ON COLUMN str_mentra.mtr_codigo IS 'C√≥digo interno mensaje';
 -- Name: COLUMN str_mentra.mtr_codtrv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_mentra.mtr_codtrv IS 'C√≥digo versi√≥n tr√°mite';
+COMMENT ON COLUMN str_mentra.mtr_codtrv IS 'CÛdigo versiÛn tr·mite';
 
 
 --
@@ -1554,7 +1554,7 @@ COMMENT ON COLUMN str_mentra.mtr_codtrv IS 'C√≥digo versi√≥n tr√°mite';
 -- Name: COLUMN str_mentra.mtr_identi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_mentra.mtr_identi IS 'C√≥digo funcional mensaje';
+COMMENT ON COLUMN str_mentra.mtr_identi IS 'CÛdigo funcional mensaje';
 
 
 --
@@ -1577,7 +1577,7 @@ CREATE TABLE str_orgres (
 -- Name: TABLE str_orgres; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_orgres IS 'Organo Responsable. Sirve para agrupar los tr√°mites';
+COMMENT ON TABLE str_orgres IS 'Organo Responsable. Sirve para agrupar los tr·mites';
 
 
 --
@@ -1857,7 +1857,7 @@ CREATE TABLE str_tradjs (
 -- Name: TABLE str_tradjs; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_tradjs IS 'Traducci√≥n datos justificante';
+COMMENT ON TABLE str_tradjs IS 'TraducciÛn datos justificante';
 
 
 --
@@ -1866,7 +1866,7 @@ COMMENT ON TABLE str_tradjs IS 'Traducci√≥n datos justificante';
 -- Name: COLUMN str_tradjs.tdj_coddjs; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradjs.tdj_coddjs IS 'C√≥digo';
+COMMENT ON COLUMN str_tradjs.tdj_coddjs IS 'CÛdigo';
 
 
 --
@@ -1884,7 +1884,7 @@ COMMENT ON COLUMN str_tradjs.tdj_codidi IS 'Idioma';
 -- Name: COLUMN str_tradjs.tdj_desc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradjs.tdj_desc IS 'Descripci√≥n campo/bloque';
+COMMENT ON COLUMN str_tradjs.tdj_desc IS 'DescripciÛn campo/bloque';
 
 
 --
@@ -1908,7 +1908,7 @@ CREATE TABLE str_tradnv (
 -- Name: TABLE str_tradnv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_tradnv IS 'Traducci√≥n especificaciones documentos por nivel de autenticaci√≥n';
+COMMENT ON TABLE str_tradnv IS 'TraducciÛn especificaciones documentos por nivel de autenticaciÛn';
 
 
 --
@@ -1917,7 +1917,7 @@ COMMENT ON TABLE str_tradnv IS 'Traducci√≥n especificaciones documentos por nive
 -- Name: COLUMN str_tradnv.tdn_coddnv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradnv.tdn_coddnv IS 'C√≥digo interno';
+COMMENT ON COLUMN str_tradnv.tdn_coddnv IS 'CÛdigo interno';
 
 
 --
@@ -1926,7 +1926,7 @@ COMMENT ON COLUMN str_tradnv.tdn_coddnv IS 'C√≥digo interno';
 -- Name: COLUMN str_tradnv.tdn_codidi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradnv.tdn_codidi IS 'C√≥digo idioma';
+COMMENT ON COLUMN str_tradnv.tdn_codidi IS 'CÛdigo idioma';
 
 
 --
@@ -1935,7 +1935,7 @@ COMMENT ON COLUMN str_tradnv.tdn_codidi IS 'C√≥digo idioma';
 -- Name: COLUMN str_tradnv.tdn_info; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradnv.tdn_info IS 'Informaci√≥n documento. Puede sobreescribirse por nivel de autenticaci√≥n.';
+COMMENT ON COLUMN str_tradnv.tdn_info IS 'InformaciÛn documento. Puede sobreescribirse por nivel de autenticaciÛn.';
 
 
 --
@@ -1969,7 +1969,7 @@ COMMENT ON TABLE str_tradoc IS 'Traducciones documento';
 -- Name: COLUMN str_tradoc.trd_coddoc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradoc.trd_coddoc IS 'C√≥digo interno documento';
+COMMENT ON COLUMN str_tradoc.trd_coddoc IS 'CÛdigo interno documento';
 
 
 --
@@ -1978,7 +1978,7 @@ COMMENT ON COLUMN str_tradoc.trd_coddoc IS 'C√≥digo interno documento';
 -- Name: COLUMN str_tradoc.trd_codidi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradoc.trd_codidi IS 'C√≥digo idioma';
+COMMENT ON COLUMN str_tradoc.trd_codidi IS 'CÛdigo idioma';
 
 
 --
@@ -1987,7 +1987,7 @@ COMMENT ON COLUMN str_tradoc.trd_codidi IS 'C√≥digo idioma';
 -- Name: COLUMN str_tradoc.trd_desc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradoc.trd_desc IS 'Descripci√≥n documento';
+COMMENT ON COLUMN str_tradoc.trd_desc IS 'DescripciÛn documento';
 
 
 --
@@ -1996,7 +1996,7 @@ COMMENT ON COLUMN str_tradoc.trd_desc IS 'Descripci√≥n documento';
 -- Name: COLUMN str_tradoc.trd_info; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tradoc.trd_info IS 'Informaci√≥n documento. Puede sobreescribirse por nivel de autenticaci√≥n.';
+COMMENT ON COLUMN str_tradoc.trd_info IS 'InformaciÛn documento. Puede sobreescribirse por nivel de autenticaciÛn.';
 
 
 --
@@ -2024,7 +2024,7 @@ CREATE TABLE str_traetn (
 -- Name: TABLE str_traetn; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_traetn IS 'Traducci√≥n especificaciones tr√°mite';
+COMMENT ON TABLE str_traetn IS 'TraducciÛn especificaciones tr·mite';
 
 
 --
@@ -2033,7 +2033,7 @@ COMMENT ON TABLE str_traetn IS 'Traducci√≥n especificaciones tr√°mite';
 -- Name: COLUMN str_traetn.tet_codetn; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traetn.tet_codetn IS 'C√≥digo especificaciones tramite nivel';
+COMMENT ON COLUMN str_traetn.tet_codetn IS 'CÛdigo especificaciones tramite nivel';
 
 
 --
@@ -2042,7 +2042,7 @@ COMMENT ON COLUMN str_traetn.tet_codetn IS 'C√≥digo especificaciones tramite niv
 -- Name: COLUMN str_traetn.tet_codidi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traetn.tet_codidi IS 'C√≥digo idioma';
+COMMENT ON COLUMN str_traetn.tet_codidi IS 'CÛdigo idioma';
 
 
 --
@@ -2051,7 +2051,7 @@ COMMENT ON COLUMN str_traetn.tet_codidi IS 'C√≥digo idioma';
 -- Name: COLUMN str_traetn.tet_insini; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traetn.tet_insini IS 'Instrucciones inicio tr√°mite';
+COMMENT ON COLUMN str_traetn.tet_insini IS 'Instrucciones inicio tr·mite';
 
 
 --
@@ -2060,7 +2060,7 @@ COMMENT ON COLUMN str_traetn.tet_insini IS 'Instrucciones inicio tr√°mite';
 -- Name: COLUMN str_traetn.tet_menina; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traetn.tet_menina IS 'Mensaje particularizado a mostrar cuando el tr√°mite este inactivo.';
+COMMENT ON COLUMN str_traetn.tet_menina IS 'Mensaje particularizado a mostrar cuando el tr·mite este inactivo.';
 
 
 --
@@ -2069,7 +2069,7 @@ COMMENT ON COLUMN str_traetn.tet_menina IS 'Mensaje particularizado a mostrar cu
 -- Name: COLUMN str_traetn.tet_insfin; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traetn.tet_insfin IS 'Instrucciones fin tr√°mite. ';
+COMMENT ON COLUMN str_traetn.tet_insfin IS 'Instrucciones fin tr·mite. ';
 
 
 --
@@ -2078,7 +2078,7 @@ COMMENT ON COLUMN str_traetn.tet_insfin IS 'Instrucciones fin tr√°mite. ';
 -- Name: COLUMN str_traetn.tet_insent; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traetn.tet_insent IS 'Instrucciones entrega. Se mostrar√°n cuando el tr√°mite se tenga que presentar presencialmente ( firma presencial o justificante de pago presencial)';
+COMMENT ON COLUMN str_traetn.tet_insent IS 'Instrucciones entrega. Se mostrar·n cuando el tr·mite se tenga que presentar presencialmente ( firma presencial o justificante de pago presencial)';
 
 
 --
@@ -2112,7 +2112,7 @@ CREATE TABLE str_tramit (
 -- Name: TABLE str_tramit; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_tramit IS 'DEFINICION DE TRAMITE TELEM√ÅTICO';
+COMMENT ON TABLE str_tramit IS 'DEFINICION DE TRAMITE TELEM¡TICO';
 
 
 --
@@ -2121,7 +2121,7 @@ COMMENT ON TABLE str_tramit IS 'DEFINICION DE TRAMITE TELEM√ÅTICO';
 -- Name: COLUMN str_tramit.tra_identi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tramit.tra_identi IS 'Identificador funcional del tr√°mite';
+COMMENT ON COLUMN str_tramit.tra_identi IS 'Identificador funcional del tr·mite';
 
 
 --
@@ -2130,7 +2130,7 @@ COMMENT ON COLUMN str_tramit.tra_identi IS 'Identificador funcional del tr√°mite
 -- Name: COLUMN str_tramit.tra_idproc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tramit.tra_idproc IS 'Identificador del procedimiento al que pertenece el tr√°mite';
+COMMENT ON COLUMN str_tramit.tra_idproc IS 'Identificador del procedimiento al que pertenece el tr·mite';
 
 
 --
@@ -2163,7 +2163,7 @@ COMMENT ON TABLE str_trampl IS 'Traducciones mensajes plataforma';
 -- Name: COLUMN str_trampl.tmp_codmpl; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_trampl.tmp_codmpl IS 'C√≥digo mensaje';
+COMMENT ON COLUMN str_trampl.tmp_codmpl IS 'CÛdigo mensaje';
 
 
 --
@@ -2172,7 +2172,7 @@ COMMENT ON COLUMN str_trampl.tmp_codmpl IS 'C√≥digo mensaje';
 -- Name: COLUMN str_trampl.tmp_codidi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_trampl.tmp_codidi IS 'C√≥digo idioma';
+COMMENT ON COLUMN str_trampl.tmp_codidi IS 'CÛdigo idioma';
 
 
 --
@@ -2181,7 +2181,7 @@ COMMENT ON COLUMN str_trampl.tmp_codidi IS 'C√≥digo idioma';
 -- Name: COLUMN str_trampl.tmp_desc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_trampl.tmp_desc IS 'Descripci√≥n mensaje';
+COMMENT ON COLUMN str_trampl.tmp_desc IS 'DescripciÛn mensaje';
 
 
 --
@@ -2205,7 +2205,7 @@ CREATE TABLE str_tramtr (
 -- Name: TABLE str_tramtr; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_tramtr IS 'Traducci√≥n de los mensajes del tr√°mite';
+COMMENT ON TABLE str_tramtr IS 'TraducciÛn de los mensajes del tr·mite';
 
 
 --
@@ -2214,7 +2214,7 @@ COMMENT ON TABLE str_tramtr IS 'Traducci√≥n de los mensajes del tr√°mite';
 -- Name: COLUMN str_tramtr.tmt_codmtr; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tramtr.tmt_codmtr IS 'C√≥digo interno mensaje';
+COMMENT ON COLUMN str_tramtr.tmt_codmtr IS 'CÛdigo interno mensaje';
 
 
 --
@@ -2223,7 +2223,7 @@ COMMENT ON COLUMN str_tramtr.tmt_codmtr IS 'C√≥digo interno mensaje';
 -- Name: COLUMN str_tramtr.tmt_codidi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tramtr.tmt_codidi IS 'C√≥digo idioma';
+COMMENT ON COLUMN str_tramtr.tmt_codidi IS 'CÛdigo idioma';
 
 
 --
@@ -2257,7 +2257,7 @@ CREATE TABLE str_traniv (
 -- Name: TABLE str_traniv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_traniv IS 'Especificaciones del tr√°mite por nivel de autenticaci√≥n';
+COMMENT ON TABLE str_traniv IS 'Especificaciones del tr·mite por nivel de autenticaciÛn';
 
 
 --
@@ -2266,7 +2266,7 @@ COMMENT ON TABLE str_traniv IS 'Especificaciones del tr√°mite por nivel de auten
 -- Name: COLUMN str_traniv.tnv_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traniv.tnv_codigo IS 'C√≥digo interno';
+COMMENT ON COLUMN str_traniv.tnv_codigo IS 'CÛdigo interno';
 
 
 --
@@ -2275,7 +2275,7 @@ COMMENT ON COLUMN str_traniv.tnv_codigo IS 'C√≥digo interno';
 -- Name: COLUMN str_traniv.tnv_codtrv; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traniv.tnv_codtrv IS 'C√≥digo versi√≥n tr√°mite';
+COMMENT ON COLUMN str_traniv.tnv_codtrv IS 'CÛdigo versiÛn tr·mite';
 
 
 --
@@ -2284,7 +2284,7 @@ COMMENT ON COLUMN str_traniv.tnv_codtrv IS 'C√≥digo versi√≥n tr√°mite';
 -- Name: COLUMN str_traniv.tnv_nivaut; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traniv.tnv_nivaut IS 'Nivel autenticaci√≥n: Certificado (C) / Ususario-pass (U) / An√≥nimo (A)';
+COMMENT ON COLUMN str_traniv.tnv_nivaut IS 'Nivel autenticaciÛn: Certificado (C) / Ususario-pass (U) / AnÛnimo (A)';
 
 
 --
@@ -2293,7 +2293,7 @@ COMMENT ON COLUMN str_traniv.tnv_nivaut IS 'Nivel autenticaci√≥n: Certificado (C
 -- Name: COLUMN str_traniv.tnv_codetn; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traniv.tnv_codetn IS 'Especificaciones tr√°mite que pueden ser establecidas por defecto y sobreescritas seg√∫n nivel autenticaci√≥n';
+COMMENT ON COLUMN str_traniv.tnv_codetn IS 'Especificaciones tr·mite que pueden ser establecidas por defecto y sobreescritas seg˙n nivel autenticaciÛn';
 
 
 --
@@ -2317,7 +2317,7 @@ CREATE TABLE str_tratra (
 -- Name: TABLE str_tratra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_tratra IS 'Traducci√≥n de Tr√°mites';
+COMMENT ON TABLE str_tratra IS 'TraducciÛn de Tr·mites';
 
 
 --
@@ -2326,7 +2326,7 @@ COMMENT ON TABLE str_tratra IS 'Traducci√≥n de Tr√°mites';
 -- Name: COLUMN str_tratra.ttr_codtra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tratra.ttr_codtra IS 'C√≥digo tr√°mite';
+COMMENT ON COLUMN str_tratra.ttr_codtra IS 'CÛdigo tr·mite';
 
 
 --
@@ -2335,7 +2335,7 @@ COMMENT ON COLUMN str_tratra.ttr_codtra IS 'C√≥digo tr√°mite';
 -- Name: COLUMN str_tratra.ttr_codidi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tratra.ttr_codidi IS 'C√≥digo idioma';
+COMMENT ON COLUMN str_tratra.ttr_codidi IS 'CÛdigo idioma';
 
 
 --
@@ -2344,7 +2344,7 @@ COMMENT ON COLUMN str_tratra.ttr_codidi IS 'C√≥digo idioma';
 -- Name: COLUMN str_tratra.ttr_desc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_tratra.ttr_desc IS 'Descripci√≥n del tr√°mite';
+COMMENT ON COLUMN str_tratra.ttr_desc IS 'DescripciÛn del tr·mite';
 
 
 --
@@ -2396,7 +2396,7 @@ CREATE TABLE str_traver (
 -- Name: TABLE str_traver; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE str_traver IS 'Versi√≥n de tr√°mites';
+COMMENT ON TABLE str_traver IS 'VersiÛn de tr·mites';
 
 
 --
@@ -2405,7 +2405,7 @@ COMMENT ON TABLE str_traver IS 'Versi√≥n de tr√°mites';
 -- Name: COLUMN str_traver.trv_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_codigo IS 'C√≥digo interno';
+COMMENT ON COLUMN str_traver.trv_codigo IS 'CÛdigo interno';
 
 
 --
@@ -2414,7 +2414,7 @@ COMMENT ON COLUMN str_traver.trv_codigo IS 'C√≥digo interno';
 -- Name: COLUMN str_traver.trv_codtra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_codtra IS 'C√≥digo tr√°mite';
+COMMENT ON COLUMN str_traver.trv_codtra IS 'CÛdigo tr·mite';
 
 
 --
@@ -2423,7 +2423,7 @@ COMMENT ON COLUMN str_traver.trv_codtra IS 'C√≥digo tr√°mite';
 -- Name: COLUMN str_traver.trv_versio; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_versio IS 'Versi√≥n tr√°mite';
+COMMENT ON COLUMN str_traver.trv_versio IS 'VersiÛn tr·mite';
 
 
 --
@@ -2432,7 +2432,7 @@ COMMENT ON COLUMN str_traver.trv_versio IS 'Versi√≥n tr√°mite';
 -- Name: COLUMN str_traver.trv_codetn; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_codetn IS 'Especificaciones tr√°mite que pueden ser establecidas por defecto y sobreescritas seg√∫n nivel autenticaci√≥n';
+COMMENT ON COLUMN str_traver.trv_codetn IS 'Especificaciones tr·mite que pueden ser establecidas por defecto y sobreescritas seg˙n nivel autenticaciÛn';
 
 
 --
@@ -2441,7 +2441,7 @@ COMMENT ON COLUMN str_traver.trv_codetn IS 'Especificaciones tr√°mite que pueden
 -- Name: COLUMN str_traver.trv_desver; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_desver IS 'Motivo de la versi√≥n';
+COMMENT ON COLUMN str_traver.trv_desver IS 'Motivo de la versiÛn';
 
 
 --
@@ -2450,7 +2450,7 @@ COMMENT ON COLUMN str_traver.trv_desver IS 'Motivo de la versi√≥n';
 -- Name: COLUMN str_traver.trv_orgdes; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_orgdes IS 'Identificador del √≥rgano destino del tr√°mite. Mapeado a tabla BORGANI de Registro ';
+COMMENT ON COLUMN str_traver.trv_orgdes IS 'Identificador del Ûrgano destino del tr·mite. Mapeado a tabla BORGANI de Registro ';
 
 
 --
@@ -2459,7 +2459,7 @@ COMMENT ON COLUMN str_traver.trv_orgdes IS 'Identificador del √≥rgano destino de
 -- Name: COLUMN str_traver.trv_uniadm; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_uniadm IS 'Unidad Administrativa responsable tr√°mite. Mapeado a tabla Unidades administrativas del SAC';
+COMMENT ON COLUMN str_traver.trv_uniadm IS 'Unidad Administrativa responsable tr·mite. Mapeado a tabla Unidades administrativas del SAC';
 
 
 --
@@ -2468,7 +2468,7 @@ COMMENT ON COLUMN str_traver.trv_uniadm IS 'Unidad Administrativa responsable tr
 -- Name: COLUMN str_traver.trv_inipla; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_inipla IS 'Fecha inicio del plazo de presentaci√≥n';
+COMMENT ON COLUMN str_traver.trv_inipla IS 'Fecha inicio del plazo de presentaciÛn';
 
 
 --
@@ -2477,7 +2477,7 @@ COMMENT ON COLUMN str_traver.trv_inipla IS 'Fecha inicio del plazo de presentaci
 -- Name: COLUMN str_traver.trv_finpla; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_finpla IS 'Fecha fin del plazo de presentaci√≥n';
+COMMENT ON COLUMN str_traver.trv_finpla IS 'Fecha fin del plazo de presentaciÛn';
 
 
 --
@@ -2486,7 +2486,7 @@ COMMENT ON COLUMN str_traver.trv_finpla IS 'Fecha fin del plazo de presentaci√≥n
 -- Name: COLUMN str_traver.trv_destin; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_destin IS 'Indica destino tr√°mite: Registro/Preregistro (R) - Bandeja (B) - Consulta (C)';
+COMMENT ON COLUMN str_traver.trv_destin IS 'Indica destino tr·mite: Registro/Preregistro (R) - Bandeja (B) - Consulta (C)';
 
 
 --
@@ -2504,7 +2504,7 @@ COMMENT ON COLUMN str_traver.trv_prenva IS 'Para preenvio indica si se realiza l
 -- Name: COLUMN str_traver.trv_firma; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_firma IS 'Indica si un tr√°mite debe firmarse: (si autenticaci√≥n certificado se realizar√° firma digital asiento sino se realizar√° firma manuscrita del justificante que deber√° presentarse presencialmente)
+COMMENT ON COLUMN str_traver.trv_firma IS 'Indica si un tr·mite debe firmarse: (si autenticaciÛn certificado se realizar· firma digital asiento sino se realizar· firma manuscrita del justificante que deber· presentarse presencialmente)
  - para destino Registro: opcional
  - para destino Bandeja: opcional
  - para destino Consulta: no procede';
@@ -2516,7 +2516,7 @@ COMMENT ON COLUMN str_traver.trv_firma IS 'Indica si un tr√°mite debe firmarse: 
 -- Name: COLUMN str_traver.trv_regofi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_regofi IS 'Para tr√°mite con destino Registro indica Oficina Registro (mapeado a bagecom_oficines)';
+COMMENT ON COLUMN str_traver.trv_regofi IS 'Para tr·mite con destino Registro indica Oficina Registro (mapeado a bagecom_oficines)';
 
 
 --
@@ -2525,7 +2525,7 @@ COMMENT ON COLUMN str_traver.trv_regofi IS 'Para tr√°mite con destino Registro i
 -- Name: COLUMN str_traver.trv_regast; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_regast IS 'Para tr√°mite con destino Registro indica Tipo Asunto (bztdocu)';
+COMMENT ON COLUMN str_traver.trv_regast IS 'Para tr·mite con destino Registro indica Tipo Asunto (bztdocu)';
 
 
 --
@@ -2534,7 +2534,7 @@ COMMENT ON COLUMN str_traver.trv_regast IS 'Para tr√°mite con destino Registro i
 -- Name: COLUMN str_traver.trv_conejb; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_conejb IS 'Para tr√°mite con destino Consulta indica JNDI del Ejb que sirve la consulta';
+COMMENT ON COLUMN str_traver.trv_conejb IS 'Para tr·mite con destino Consulta indica JNDI del Ejb que sirve la consulta';
 
 
 --
@@ -2543,7 +2543,7 @@ COMMENT ON COLUMN str_traver.trv_conejb IS 'Para tr√°mite con destino Consulta i
 -- Name: COLUMN str_traver.trv_conrem; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_conrem IS 'Para tr√°mite con destino Consulta indica si el Ejb que sirve la consulta es remoto (R) o local (L)';
+COMMENT ON COLUMN str_traver.trv_conrem IS 'Para tr·mite con destino Consulta indica si el Ejb que sirve la consulta es remoto (R) o local (L)';
 
 
 --
@@ -2552,7 +2552,7 @@ COMMENT ON COLUMN str_traver.trv_conrem IS 'Para tr√°mite con destino Consulta i
 -- Name: COLUMN str_traver.trv_conurl; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_conurl IS 'Para tr√°mite con destino Consulta si  el Ejb que sirve la consulta es remoto indica la URL de acceso';
+COMMENT ON COLUMN str_traver.trv_conurl IS 'Para tr·mite con destino Consulta si  el Ejb que sirve la consulta es remoto indica la URL de acceso';
 
 
 --
@@ -2561,10 +2561,10 @@ COMMENT ON COLUMN str_traver.trv_conurl IS 'Para tr√°mite con destino Consulta s
 -- Name: COLUMN str_traver.trv_conaut; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_conaut IS 'Para tr√°mite con destino Consulta indica si se debe realizar:
- - N: autenticaci√≥n impl√≠cita de forma que el contenedor EJBs traspasa autenticacion
- - S: expl√≠cita a traves de usuario/password
- - C: expl√≠cita a trav√©s plugin autenticaci√≥n del organismo';
+COMMENT ON COLUMN str_traver.trv_conaut IS 'Para tr·mite con destino Consulta indica si se debe realizar:
+ - N: autenticaciÛn implÌcita de forma que el contenedor EJBs traspasa autenticacion
+ - S: explÌcita a traves de usuario/password
+ - C: explÌcita a travÈs plugin autenticaciÛn del organismo';
 
 
 --
@@ -2573,7 +2573,7 @@ COMMENT ON COLUMN str_traver.trv_conaut IS 'Para tr√°mite con destino Consulta i
 -- Name: COLUMN str_traver.trv_conusu; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_conusu IS 'Para tr√°mite con destino Consulta y con autenticaci√≥n explic√≠ta con usuario/password se indica usuario';
+COMMENT ON COLUMN str_traver.trv_conusu IS 'Para tr·mite con destino Consulta y con autenticaciÛn explicÌta con usuario/password se indica usuario';
 
 
 --
@@ -2582,7 +2582,7 @@ COMMENT ON COLUMN str_traver.trv_conusu IS 'Para tr√°mite con destino Consulta y
 -- Name: COLUMN str_traver.trv_conpwd; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_conpwd IS 'Para tr√°mite con destino Consulta y con autenticaci√≥n explic√≠ta  con usuario/password  se indica password';
+COMMENT ON COLUMN str_traver.trv_conpwd IS 'Para tr·mite con destino Consulta y con autenticaciÛn explicÌta  con usuario/password  se indica password';
 
 
 --
@@ -2591,7 +2591,7 @@ COMMENT ON COLUMN str_traver.trv_conpwd IS 'Para tr√°mite con destino Consulta y
 -- Name: COLUMN str_traver.trv_bloque; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_bloque IS 'Permite habilitar sistema de bloqueo para modificaci√≥n de tr√°mites en el sistraback de manera que no permite la modificaci√≥n simultanea';
+COMMENT ON COLUMN str_traver.trv_bloque IS 'Permite habilitar sistema de bloqueo para modificaciÛn de tr·mites en el sistraback de manera que no permite la modificaciÛn simultanea';
 
 
 --
@@ -2618,7 +2618,7 @@ COMMENT ON COLUMN str_traver.trv_idisop IS 'Idiomas soportados: lista de idiomas
 -- Name: COLUMN str_traver.trv_reduci; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_reduci IS 'Indica si un tr√°mite sigue el circuito reducido S - si  N - no';
+COMMENT ON COLUMN str_traver.trv_reduci IS 'Indica si un tr·mite sigue el circuito reducido S - si  N - no';
 
 
 --
@@ -2627,7 +2627,7 @@ COMMENT ON COLUMN str_traver.trv_reduci IS 'Indica si un tr√°mite sigue el circu
 -- Name: COLUMN str_traver.trv_redfin; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_redfin IS 'Indica para un tr√°mite se salta automaticamente a la url de fin ( S - si  N - no) sin mostrar la pantalla de justificante';
+COMMENT ON COLUMN str_traver.trv_redfin IS 'Indica para un tr·mite se salta automaticamente a la url de fin ( S - si  N - no) sin mostrar la pantalla de justificante';
 
 
 --
@@ -2645,7 +2645,7 @@ COMMENT ON COLUMN str_traver.trv_tagcar IS 'Tag que indica el cuaderno de carga 
 -- Name: COLUMN str_traver.trv_feccar; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN str_traver.trv_feccar IS 'Fecha en la que se ha exportado (al importar el xml se alimentar√° este campo del xml origen)';
+COMMENT ON COLUMN str_traver.trv_feccar IS 'Fecha en la que se ha exportado (al importar el xml se alimentar· este campo del xml origen)';
 
 
 --
@@ -3415,7 +3415,7 @@ comment on column STR_TRAVER.TRV_DEBUG is 'Indica si el debug esta habilitado';
 -- SISTRA: FIN TRAMITE AUTO PARA TRAMITES CON PAGO FINALIZADO
 alter table STR_ESPNIV  add ETN_ALEFIN  character varying(1) default 'N' not null;
 comment on column STR_ESPNIV.ETN_ALEFIN is
-'Indica si se intenta finalizar autom·ticamente el tr·mite antes de realizar la alerta de tr·mites inacabados con pago realizado';
+'Indica si se intenta finalizar autom?camente el tr?te antes de realizar la alerta de tr?tes inacabados con pago realizado';
 
 
 -- V3.1.4

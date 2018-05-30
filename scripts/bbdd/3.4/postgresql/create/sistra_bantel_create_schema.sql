@@ -1,4 +1,4 @@
-Ôªø--
+--
 -- PostgreSQL database dump
 --
 
@@ -32,7 +32,7 @@ COMMENT ON TABLE bte_arcfex IS 'Archivo fichero exportacion';
 -- Name: COLUMN bte_arcfex.afe_idefic; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_arcfex.afe_idefic IS 'IDENTIFICADOR DEL TR√ÅMITE';
+COMMENT ON COLUMN bte_arcfex.afe_idefic IS 'IDENTIFICADOR DEL TR¡MITE';
 
 
 --
@@ -176,7 +176,7 @@ COMMENT ON TABLE bte_docum IS 'DOCUMENTOS ASOCIADOS A LA ENTRADA';
 -- Name: COLUMN bte_docum.doc_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_docum.doc_codigo IS 'C√ìDIGO INTERNO';
+COMMENT ON COLUMN bte_docum.doc_codigo IS 'C”DIGO INTERNO';
 
 
 --
@@ -185,7 +185,7 @@ COMMENT ON COLUMN bte_docum.doc_codigo IS 'C√ìDIGO INTERNO';
 -- Name: COLUMN bte_docum.doc_codtra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_docum.doc_codtra IS 'C√ìDIGO ENTRADA';
+COMMENT ON COLUMN bte_docum.doc_codtra IS 'C”DIGO ENTRADA';
 
 
 --
@@ -194,7 +194,7 @@ COMMENT ON COLUMN bte_docum.doc_codtra IS 'C√ìDIGO ENTRADA';
 -- Name: COLUMN bte_docum.doc_prese; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_docum.doc_prese IS 'Indica si el documento requiere acci√≥n presencial';
+COMMENT ON COLUMN bte_docum.doc_prese IS 'Indica si el documento requiere acciÛn presencial';
 
 
 --
@@ -212,7 +212,7 @@ COMMENT ON COLUMN bte_docum.doc_desc IS 'NOMBRE DEL DOCUMENTO';
 -- Name: COLUMN bte_docum.doc_docide; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_docum.doc_docide IS 'Identificador documento  (Para documentos anexados telem√°ticamente sirve para asociar con documento del asiento)';
+COMMENT ON COLUMN bte_docum.doc_docide IS 'Identificador documento  (Para documentos anexados telem·ticamente sirve para asociar con documento del asiento)';
 
 
 --
@@ -221,7 +221,7 @@ COMMENT ON COLUMN bte_docum.doc_docide IS 'Identificador documento  (Para docume
 -- Name: COLUMN bte_docum.doc_docnum; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_docum.doc_docnum IS 'N√∫mero instancia  (Para documentos anexados telem√°ticamente sirve para asociar con documento del asiento)';
+COMMENT ON COLUMN bte_docum.doc_docnum IS 'N˙mero instancia  (Para documentos anexados telem·ticamente sirve para asociar con documento del asiento)';
 
 
 --
@@ -230,7 +230,7 @@ COMMENT ON COLUMN bte_docum.doc_docnum IS 'N√∫mero instancia  (Para documentos a
 -- Name: COLUMN bte_docum.doc_rdscod; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_docum.doc_rdscod IS 'Para documentos anexados telem√°ticamente: C√≥digo RDS del documento';
+COMMENT ON COLUMN bte_docum.doc_rdscod IS 'Para documentos anexados telem·ticamente: CÛdigo RDS del documento';
 
 
 --
@@ -239,7 +239,7 @@ COMMENT ON COLUMN bte_docum.doc_rdscod IS 'Para documentos anexados telem√°ticam
 -- Name: COLUMN bte_docum.doc_rdscla; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_docum.doc_rdscla IS 'Para documentos anexados telem√°ticamente: Clave RDS del documento';
+COMMENT ON COLUMN bte_docum.doc_rdscla IS 'Para documentos anexados telem·ticamente: Clave RDS del documento';
 
 
 --
@@ -298,7 +298,7 @@ CREATE TABLE bte_ficexp (
 -- Name: COLUMN bte_ficexp.fic_idetra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_ficexp.fic_idetra IS 'IDENTIFICADOR DEL TR√ÅMITE';
+COMMENT ON COLUMN bte_ficexp.fic_idetra IS 'IDENTIFICADOR DEL TR¡MITE';
 
 
 --
@@ -582,7 +582,7 @@ CREATE TABLE bte_proapl (
 -- Name: TABLE bte_proapl; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE bte_proapl IS 'LISTA DE TRAMITES QUE SE PUEDEN REGISTRAR EN LA BANDEJA. PARA CADA TRAMITE SE INDICA QUE APLICACI√ìN LO GESTIONA.';
+COMMENT ON TABLE bte_proapl IS 'LISTA DE TRAMITES QUE SE PUEDEN REGISTRAR EN LA BANDEJA. PARA CADA TRAMITE SE INDICA QUE APLICACI”N LO GESTIONA.';
 
 
 --
@@ -609,7 +609,7 @@ COMMENT ON COLUMN bte_proapl.tap_desc IS 'DESCRIPCION APLICACION';
 -- Name: COLUMN bte_proapl.tap_inmed; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_proapl.tap_inmed IS 'INDICA SI TRAS UNA ENTRADA SE REALIZAR√Å UN AVISO PARA DICHA ENTRADA. ESTE AVISO SE REALIZAR√Å DE FORMA ASINCRONA.';
+COMMENT ON COLUMN bte_proapl.tap_inmed IS 'INDICA SI TRAS UNA ENTRADA SE REALIZAR¡ UN AVISO PARA DICHA ENTRADA. ESTE AVISO SE REALIZAR¡ DE FORMA ASINCRONA.';
 
 
 --
@@ -618,7 +618,7 @@ COMMENT ON COLUMN bte_proapl.tap_inmed IS 'INDICA SI TRAS UNA ENTRADA SE REALIZA
 -- Name: COLUMN bte_proapl.tap_inform; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_proapl.tap_inform IS 'PERMITE INDICAR CADA CUANTO TIEMPO (EN HORAS) SE AVISARA AL EJB CON LOS TRAMITES RECIBIDOS (NO PROCESADOS). SI TIENE VALOR 0 NO SE INFORMAR√Å.';
+COMMENT ON COLUMN bte_proapl.tap_inform IS 'PERMITE INDICAR CADA CUANTO TIEMPO (EN HORAS) SE AVISARA AL EJB CON LOS TRAMITES RECIBIDOS (NO PROCESADOS). SI TIENE VALOR 0 NO SE INFORMAR¡.';
 
 
 --
@@ -636,7 +636,7 @@ COMMENT ON COLUMN bte_proapl.tap_tipacc IS 'TIPO DE ACCESO AL BACKOFFICE: EJB (E
 -- Name: COLUMN bte_proapl.tap_url; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_proapl.tap_url IS 'INDICA SEG√öN TIPO DE ACCESO:
+COMMENT ON COLUMN bte_proapl.tap_url IS 'INDICA SEG⁄N TIPO DE ACCESO:
 - EJB: JNDI EJB
 - WEBSERVICE: URL WEBSERVICE
 ';
@@ -667,9 +667,9 @@ COMMENT ON COLUMN bte_proapl.tap_ejbrem IS 'PARA TIPO DOMINIO EJB INDICA SI EL E
 --
 
 COMMENT ON COLUMN bte_proapl.tap_ejbaut IS 'PARA TIPO DOMINIO EJB/WS INDICA:
- - N: autenticaci√≥n impl√≠cita de forma que el contenedor EJBs traspasa autenticacion
- - S: expl√≠cita a traves de usuario/password
- - C: expl√≠cita a trav√©s plugin autenticaci√≥n del organismo';
+ - N: autenticaciÛn implÌcita de forma que el contenedor EJBs traspasa autenticacion
+ - S: explÌcita a traves de usuario/password
+ - C: explÌcita a travÈs plugin autenticaciÛn del organismo';
 
 
 --
@@ -696,7 +696,7 @@ COMMENT ON COLUMN bte_proapl.tap_pwd IS 'PARA TIPO AUTENTICACION EXPLICITA POR U
 -- Name: COLUMN bte_proapl.tap_rol; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_proapl.tap_rol IS 'PERMITE ESTABLECER LA COMPROBACI√ìN DE ROL QUE TIENE QUE TENER LA APLICACI√ìN QUE INVOCA AL EJB DE BANDEJA PARA OBTENER ENTRADAS PENDIENTES';
+COMMENT ON COLUMN bte_proapl.tap_rol IS 'PERMITE ESTABLECER LA COMPROBACI”N DE ROL QUE TIENE QUE TENER LA APLICACI”N QUE INVOCA AL EJB DE BANDEJA PARA OBTENER ENTRADAS PENDIENTES';
 
 
 --
@@ -938,7 +938,7 @@ CREATE TABLE bte_tramit (
 -- Name: TABLE bte_tramit; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE bte_tramit IS 'TRAMITES TELEM√ÅTICOS DEPOSITADOS EN LA BANDEJA POR EL SISTEMA DE TRAMITACI√ìN';
+COMMENT ON TABLE bte_tramit IS 'TRAMITES TELEM¡TICOS DEPOSITADOS EN LA BANDEJA POR EL SISTEMA DE TRAMITACI”N';
 
 
 --
@@ -947,7 +947,7 @@ COMMENT ON TABLE bte_tramit IS 'TRAMITES TELEM√ÅTICOS DEPOSITADOS EN LA BANDEJA 
 -- Name: COLUMN bte_tramit.tra_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_tramit.tra_codigo IS 'C√ìDIGO ENTRADA';
+COMMENT ON COLUMN bte_tramit.tra_codigo IS 'C”DIGO ENTRADA';
 
 
 --
@@ -974,7 +974,7 @@ COMMENT ON COLUMN bte_tramit.tra_fecha IS 'FECHA ENTRADA';
 -- Name: COLUMN bte_tramit.tra_tipo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_tramit.tra_tipo IS 'TIPO ENTRADA: E (Registro) / P (Preregistro confirmado) / B (Env√≠o) / N (Preenvio confirmado)';
+COMMENT ON COLUMN bte_tramit.tra_tipo IS 'TIPO ENTRADA: E (Registro) / P (Preregistro confirmado) / B (EnvÌo) / N (Preenvio confirmado)';
 
 
 --
@@ -1019,7 +1019,7 @@ COMMENT ON COLUMN bte_tramit.tra_idetra IS 'IDENTIFICADOR DEL TRAMITE';
 -- Name: COLUMN bte_tramit.tra_vertra; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_tramit.tra_vertra IS 'VERSI√ìN DEL TRAMITE';
+COMMENT ON COLUMN bte_tramit.tra_vertra IS 'VERSI”N DEL TRAMITE';
 
 
 --
@@ -1037,7 +1037,7 @@ COMMENT ON COLUMN bte_tramit.tra_uniadm IS 'UNIDAD ADMINISTRATIVA RESPONSABLE DE
 -- Name: COLUMN bte_tramit.tra_nivaut; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_tramit.tra_nivaut IS 'NIVEL DE AUTENTICACI√ìN CON EL QUE SE HA REALIZADO EL TR√ÅMITE';
+COMMENT ON COLUMN bte_tramit.tra_nivaut IS 'NIVEL DE AUTENTICACI”N CON EL QUE SE HA REALIZADO EL TR¡MITE';
 
 
 --
@@ -1091,7 +1091,7 @@ COMMENT ON COLUMN bte_tramit.tra_clajus IS 'CLAVE DE LA REFERENCIA RDS DEL JUSTI
 -- Name: COLUMN bte_tramit.tra_numreg; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_tramit.tra_numreg IS 'INDICA EL N√öMERO DE REGISTRO / ENVIO';
+COMMENT ON COLUMN bte_tramit.tra_numreg IS 'INDICA EL N⁄MERO DE REGISTRO / ENVIO';
 
 
 --
@@ -1127,7 +1127,7 @@ COMMENT ON COLUMN bte_tramit.tra_fecpre IS 'PARA TIPO P INDICA FECHA DE PREREGIS
 -- Name: COLUMN bte_tramit.tra_nifrte; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_tramit.tra_nifrte IS 'NIF REPRESENTANTE QUE REALIZA TR√ÅMITE QUE REALIZA TR√ÅMITE. SE RECOGE EN L A TABLA PARA OPTIMIZAR ACCESO.';
+COMMENT ON COLUMN bte_tramit.tra_nifrte IS 'NIF REPRESENTANTE QUE REALIZA TR¡MITE QUE REALIZA TR¡MITE. SE RECOGE EN L A TABLA PARA OPTIMIZAR ACCESO.';
 
 
 --
@@ -1136,7 +1136,7 @@ COMMENT ON COLUMN bte_tramit.tra_nifrte IS 'NIF REPRESENTANTE QUE REALIZA TR√ÅMI
 -- Name: COLUMN bte_tramit.tra_nomrte; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN bte_tramit.tra_nomrte IS 'NOMBRE REPRESENTANTE QUE REALIZA TR√ÅMITE. SE RECOGE EN L A TABLA PARA OPTIMIZAR ACCESO.';
+COMMENT ON COLUMN bte_tramit.tra_nomrte IS 'NOMBRE REPRESENTANTE QUE REALIZA TR¡MITE. SE RECOGE EN L A TABLA PARA OPTIMIZAR ACCESO.';
 
 
 --
@@ -1182,9 +1182,9 @@ COMMENT ON COLUMN bte_tramit.tra_idioma IS 'IDIOMA EN EL QUE SE HA REALIZADO EL 
 --
 
 COMMENT ON COLUMN bte_tramit.tra_ticopr IS 'TIPO DE CONFIRMACION DEL PREREGISTRO:
-   R -  Entrada confirmada mediante el m√≥dulo de confirmaci√≥n de preregistros/preenvios en el registro presencial (circuito normal)
-   G -  Entrada confirmada por el gestor: la documentaci√≥n no ha sido entregada en un punto de registro o bien porque en el registro presencial no se ha confirmado en el m√≥dulo de confirmaci√≥n de preregistros/preenvios.
-   A -  Entrada que se confirmada autom√°ticamente por la plataforma tras realizarse el preenvio (SOLO PARA PREENVIOS)';
+   R -  Entrada confirmada mediante el mÛdulo de confirmaciÛn de preregistros/preenvios en el registro presencial (circuito normal)
+   G -  Entrada confirmada por el gestor: la documentaciÛn no ha sido entregada en un punto de registro o bien porque en el registro presencial no se ha confirmado en el mÛdulo de confirmaciÛn de preregistros/preenvios.
+   A -  Entrada que se confirmada autom·ticamente por la plataforma tras realizarse el preenvio (SOLO PARA PREENVIOS)';
 
 
 --
@@ -1754,7 +1754,7 @@ comment on column BTE_PROAPL.TAP_IDEPEX is
 alter table BTE_PROAPL add TAP_AVIINC character varying(255);
 
 comment on column BTE_PROAPL.TAP_AVIINC is
-'Email para envÔøΩo de incidencias';
+'Email para env?o de incidencias';
 
 -- V3.3.4
 alter table BTE_PROAPL add TAP_IDEENT character varying(100);
@@ -1811,16 +1811,16 @@ create table BTE_TRAPRO  (
 );
 
 comment on table BTE_TRAPRO is
-'TraducciÔøΩn de Procedimientos';
+'Traducci?n de Procedimientos';
 
 comment on column BTE_TRAPRO.PRO_IDEPRO is
-'CÔøΩdigo trÔøΩmite';
+'C?digo tr?mite';
 
 comment on column BTE_TRAPRO.PRO_CODIDI is
-'CÔøΩdigo idioma';
+'C?digo idioma';
 
 comment on column BTE_TRAPRO.PRO_DESC is
-'DescripciÔøΩn del trÔøΩmite';
+'Descripci?n del tr?mite';
 
 alter table BTE_TRAPRO
    add constraint BTE_PRO_PK primary key (PRO_IDEPRO, PRO_CODIDI);

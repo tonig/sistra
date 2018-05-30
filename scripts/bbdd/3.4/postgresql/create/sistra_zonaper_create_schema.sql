@@ -1,4 +1,4 @@
-﻿
+
 create sequence ZPE_SEQDEN;
 
 create sequence ZPE_SEQDHE;
@@ -36,22 +36,22 @@ create table ZPE_DOCENT  (
 );
 
 comment on column ZPE_DOCENT.DEN_CODIGO is
-'C�digo interno';
+'C?digo interno';
 
 comment on column ZPE_DOCENT.DEN_CODENT is
-'C�digo entrada';
+'C?digo entrada';
 
 comment on column ZPE_DOCENT.DEN_DOCIDE is
 'Identificador documento';
 
 comment on column ZPE_DOCENT.DEN_DOCNUM is
-'N�mero instancia';
+'N?mero instancia';
 
 comment on column ZPE_DOCENT.DEN_DESC is
-'Descripci�n documento';
+'Descripci?n documento';
 
 comment on column ZPE_DOCENT.DEN_RDSCOD is
-'C�digo RDS del documento';
+'C?digo RDS del documento';
 
 comment on column ZPE_DOCENT.DEN_RDSCLA is
 'Clave RDS del documento';
@@ -74,13 +74,13 @@ create table ZPE_DOCHIE  (
 
 
 comment on table ZPE_DOCHIE is
-'Documento perteneciente a un evento del hist�rico de ';
+'Documento perteneciente a un evento del hist?rico de ';
 
 comment on column ZPE_DOCHIE.DHE_CODIGO is
-'Identificador �nico del documento';
+'Identificador ?nico del documento';
 
 comment on column ZPE_DOCHIE.DHE_CODHIE is
-'Identificador �nico del evento';
+'Identificador ?nico del evento';
 
 comment on column ZPE_DOCHIE.DHE_RDSCOD is
 'Codigo rds del documento';
@@ -114,22 +114,22 @@ create table ZPE_DOCNOT  (
 
 
 comment on column ZPE_DOCNOT.DNO_CODIGO is
-'C�digo interno';
+'C?digo interno';
 
 comment on column ZPE_DOCNOT.DNO_CODNOT is
-'C�digo notificacion';
+'C?digo notificacion';
 
 comment on column ZPE_DOCNOT.DNO_DOCIDE is
 'Identificador documento';
 
 comment on column ZPE_DOCNOT.DNO_DOCNUM is
-'N�mero instancia';
+'N?mero instancia';
 
 comment on column ZPE_DOCNOT.DNO_DESC is
-'Descripci�n documento';
+'Descripci?n documento';
 
 comment on column ZPE_DOCNOT.DNO_RDSCOD is
-'C�digo RDS del documento';
+'C?digo RDS del documento';
 
 comment on column ZPE_DOCNOT.DNO_RDSCLA is
 'Clave RDS del documento';
@@ -180,7 +180,7 @@ comment on column ZPE_DOCPER.DPE_DOCIDE is
 'IDENTIFICADOR DOCUMENTO';
 
 comment on column ZPE_DOCPER.DPE_DOCNUM is
-'NUMERO INSTANCIA DOCUMENTO. TENDRA SIGNIFICADO PARA LOS DOCUMENTOS GENERICOS, PARA LOS DEM�S SER�� 1.';
+'NUMERO INSTANCIA DOCUMENTO. TENDRA SIGNIFICADO PARA LOS DOCUMENTOS GENERICOS, PARA LOS DEM?S SER?? 1.';
 
 comment on column ZPE_DOCPER.DPE_ESTADO is
 'ESTADO: CORRECTO (S) / INCORRECTO (N)  / VACIO (V)';
@@ -195,7 +195,7 @@ comment on column ZPE_DOCPER.DPE_NOMFIC is
 'NOMBRE DE ULTIMO FICHERO ANEXADO PARA DOCUMENTOS ANEXOS';
 
 comment on column ZPE_DOCPER.DPE_GENDES is
-'DESCRIPCION PERSONALIZADA PARA GEN�RICOS';
+'DESCRIPCION PERSONALIZADA PARA GEN?RICOS';
 
 alter table ZPE_DOCPER
    add constraint ZPE_DPEIDE_UNI unique (DPE_CODTPE, DPE_DOCIDE, DPE_DOCNUM);
@@ -227,28 +227,28 @@ comment on table ZPE_DOCPRE is
 'Documentos asociados al preregistro';
 
 comment on column ZPE_DOCPRE.DPR_CODIGO is
-'C�digo interno';
+'C?digo interno';
 
 comment on column ZPE_DOCPRE.DPR_CODPRE is
-'C�digo entrada';
+'C?digo entrada';
 
 comment on column ZPE_DOCPRE.DPR_PRESE is
-'Indica si el documento requiere acci�n presencial';
+'Indica si el documento requiere acci?n presencial';
 
 comment on column ZPE_DOCPRE.DPR_DESC is
-'Descripci�n documento';
+'Descripci?n documento';
 
 comment on column ZPE_DOCPRE.DPR_DOCIDE is
-'Identificador documento  (Para documentos anexados telem�ticamente sirve para asociar con documento del asiento)';
+'Identificador documento  (Para documentos anexados telem?ticamente sirve para asociar con documento del asiento)';
 
 comment on column ZPE_DOCPRE.DPR_DOCNUM is
-'N�mero instancia  (Para documentos anexados telem�ticamente sirve para asociar con documento del asiento)';
+'N?mero instancia  (Para documentos anexados telem?ticamente sirve para asociar con documento del asiento)';
 
 comment on column ZPE_DOCPRE.DPR_RDSCOD is
-'Para documentos anexados telem�ticamente: C�digo RDS del documento';
+'Para documentos anexados telem?ticamente: C?digo RDS del documento';
 
 comment on column ZPE_DOCPRE.DPR_RDSCLA is
-'Para documentos anexados telem�ticamente: Clave RDS del documento';
+'Para documentos anexados telem?ticamente: Clave RDS del documento';
 
 comment on column ZPE_DOCPRE.DPR_TIPDOC is
 'Para documentos a presentar presencialmente: Indica tipo de documento J/F/A/P (Justificante/Formulario/Anexo/Pago)';
@@ -296,7 +296,7 @@ comment on column ZPE_DPEBCK.DPB_DOCIDE is
 'IDENTIFICADOR DOCUMENTO';
 
 comment on column ZPE_DPEBCK.DPB_DOCNUM is
-'NUMERO INSTANCIA DOCUMENTO. TENDRA SIGNIFICADO PARA LOS DOCUMENTOS GENERICOS, PARA LOS DEM��S SER�� 1.';
+'NUMERO INSTANCIA DOCUMENTO. TENDRA SIGNIFICADO PARA LOS DOCUMENTOS GENERICOS, PARA LOS DEM??S SER?? 1.';
 
 comment on column ZPE_DPEBCK.DPB_ESTADO is
 'ESTADO: CORRECTO (S) / INCORRECTO (N)';
@@ -337,28 +337,28 @@ comment on table ZPE_DPRBCK is
 'Documentos asociados al preregistro backup';
 
 comment on column ZPE_DPRBCK.DRB_CODIGO is
-'C�digo interno';
+'C?digo interno';
 
 comment on column ZPE_DPRBCK.DRB_CODPRE is
-'C�digo entrada';
+'C?digo entrada';
 
 comment on column ZPE_DPRBCK.DRB_PRESE is
-'Indica si el documento requiere acci�n presencial';
+'Indica si el documento requiere acci?n presencial';
 
 comment on column ZPE_DPRBCK.DRB_DESC is
-'Descripci�n documento';
+'Descripci?n documento';
 
 comment on column ZPE_DPRBCK.DRB_DOCIDE is
 'Identificador documento  (sirve para asociar con documento del asiento)';
 
 comment on column ZPE_DPRBCK.DRB_DOCNUM is
-'Número instancia  (sirve para asociar con documento del asiento)';
+'N�mero instancia  (sirve para asociar con documento del asiento)';
 
 comment on column ZPE_DPRBCK.DRB_RDSCOD is
-'Para documentos anexados telem�ticamente: C�digo RDS del documento';
+'Para documentos anexados telem?ticamente: C?digo RDS del documento';
 
 comment on column ZPE_DPRBCK.DRB_RDSCLA is
-'Para documentos anexados telem�ticamente: Clave RDS del documento';
+'Para documentos anexados telem?ticamente: Clave RDS del documento';
 
 comment on column ZPE_DPRBCK.DRB_TIPDOC is
 'Para documentos a presentar presencialmente: Indica tipo de documento J/F/A/P (Justificante/Formulario/Anexo/Pago)';
@@ -395,19 +395,19 @@ comment on table ZPE_ELEEX is
 'Elementos del expediente';
 
 comment on column ZPE_ELEEX.ELE_CODIGO is
-'Identificador �nico del elemento de expediente';
+'Identificador ?nico del elemento de expediente';
 
 comment on column ZPE_ELEEX.ELE_CODEXP is
-'Identificador interno �nico del expediente';
+'Identificador interno ?nico del expediente';
 
 comment on column ZPE_ELEEX.ELE_FECHA is
-'Fecha creaci�n';
+'Fecha creaci?n';
 
 comment on column ZPE_ELEEX.ELE_TIPO is
 'Tipo evento (T Tramite telematic/ P Tramite preregistro / N Notificacion / A Aviso)';
 
 comment on column ZPE_ELEEX.ELE_CODELE is
-'Codigo elemento destino (seg�n tipo evento)';
+'Codigo elemento destino (seg?n tipo evento)';
 
 comment on column ZPE_ELEEX.ELE_CODAVI is
 'Codigo aviso movilidad asociado al elemento';
@@ -457,40 +457,40 @@ create table ZPE_ENTTEL  (
 
 
 comment on table ZPE_ENTTEL is
-'Log de entradas telem�ticas';
+'Log de entradas telem?ticas';
 
 comment on column ZPE_ENTTEL.ENT_CODIGO is
-'C�digo interno entrada';
+'C?digo interno entrada';
 
 comment on column ZPE_ENTTEL.ENT_TIPO is
-'Tipo de entrada: E (Registro Entrada) / B (Env�o Bandeja)';
+'Tipo de entrada: E (Registro Entrada) / B (Env?o Bandeja)';
 
 comment on column ZPE_ENTTEL.ENT_IDEPER is
 'IDENTIFICADOR DE PERSISTENCIA. ';
 
 comment on column ZPE_ENTTEL.ENT_NIVAUT is
-'Nivel autenticaci�n U (Usuario) / C (Certificado) / A (An�nimo)';
+'Nivel autenticaci?n U (Usuario) / C (Certificado) / A (An?nimo)';
 
 comment on column ZPE_ENTTEL.ENT_DESC is
-'Descripci�n del tr�mite';
+'Descripci?n del tr?mite';
 
 comment on column ZPE_ENTTEL.ENT_USER is
 'En caso de estar autenticado referencia usuario Seycon que realiza la entrada';
 
 comment on column ZPE_ENTTEL.ENT_NUMREG is
-'Indica el n� de registro/n� de env�o';
+'Indica el n? de registro/n? de env?o';
 
 comment on column ZPE_ENTTEL.ENT_FECHA is
-'Fecha de registro / env�o';
+'Fecha de registro / env?o';
 
 comment on column ZPE_ENTTEL.ENT_CODASI is
-'C�digo de la referencia RDS del asiento';
+'C?digo de la referencia RDS del asiento';
 
 comment on column ZPE_ENTTEL.ENT_CLAASI is
 'Clave de la referencia RDS del asiento';
 
 comment on column ZPE_ENTTEL.ENT_CODJUS is
-'C�digo de la referencia RDS del justificante';
+'C?digo de la referencia RDS del justificante';
 
 comment on column ZPE_ENTTEL.ENT_CLAJUS is
 'Clave de la referencia RDS del justificante';
@@ -511,10 +511,10 @@ comment on column ZPE_ENTTEL.ENT_NOMRDO is
 'En caso de existir representado, indica nombre del representado';
 
 comment on column ZPE_ENTTEL.ENT_TRAMOD is
-'MODELO TRAMITE (Permite nulos ya que es un campo a�adido a posteriori)';
+'MODELO TRAMITE (Permite nulos ya que es un campo a?adido a posteriori)';
 
 comment on column ZPE_ENTTEL.ENT_TRAVER is
-'VERSION TRAMITE (Permite nulos ya que es un campo a�adido a posteriori)';
+'VERSION TRAMITE (Permite nulos ya que es un campo a?adido a posteriori)';
 
 comment on column ZPE_ENTTEL.ENT_AVISOS is
 'Indica si se habilitan los avisos para expediente';
@@ -581,7 +581,7 @@ comment on column ZPE_EXPEDI.EXP_NIFRTE is
 
 
 comment on column ZPE_EXPEDI.EXP_CODIGO is
-'Identificador interno �nico del expediente';
+'Identificador interno ?nico del expediente';
 
 comment on column ZPE_EXPEDI.EXP_UNIADM is
 'Unidad administrativa que da de alta el expediente';
@@ -596,7 +596,7 @@ comment on column ZPE_EXPEDI.EXP_FECEXP is
 'Fecha de alta del expediente';
 
 comment on column ZPE_EXPEDI.EXP_DESC is
-'Descripci�n del expediente';
+'Descripci?n del expediente';
 
 comment on column ZPE_EXPEDI.EXP_IDIOMA is
 'Idioma de tramitacion del expediente';
@@ -631,8 +631,8 @@ comment on column ZPE_EXPEDI.EXP_ESTADO is
 SE: Solicitud enviada
 AP: Aviso pendiente
 AR: Aviso recibido
-NP: Notificaci�n pendiente
-NR: Notificaci�n recibida';
+NP: Notificaci?n pendiente
+NR: Notificaci?n recibida';
 
 comment on column ZPE_EXPEDI.EXP_AVISOS is
 'Indica si se habilitan los avisos para expediente';
@@ -661,10 +661,10 @@ create table ZPE_HISTEX  (
 );
 
 comment on table ZPE_HISTEX is
-'Hist�rico de eventos para un expediente';
+'Hist?rico de eventos para un expediente';
 
 comment on column ZPE_HISTEX.HIE_CODIGO is
-'Identificador �nico del evento';
+'Identificador ?nico del evento';
 
 comment on column ZPE_HISTEX.HIE_FECEVE is
 'Fecha del evento';
@@ -724,40 +724,40 @@ create table ZPE_NOTTEL  (
 
 
 comment on column ZPE_NOTTEL.NOT_FECPLZ is
-'Indica fecha de plazo de fin de apertura de la notificaci�n (en caso de que se controle fecha entrega)';
+'Indica fecha de plazo de fin de apertura de la notificaci?n (en caso de que se controle fecha entrega)';
 
 comment on column ZPE_NOTTEL.NOT_RECHAZ is
 'Indica que la notificacion esta rechazada (en caso de que se controle fecha entrega)';
 
 comment on table ZPE_NOTTEL is
-'Log de notificaciones telem�ticas';
+'Log de notificaciones telem?ticas';
 
 comment on column ZPE_NOTTEL.NOT_CODIGO is
-'C�digo interno salida';
+'C?digo interno salida';
 
 comment on column ZPE_NOTTEL.NOT_USER is
-'Referencia usuario Seycon que debe recoger la notificaci�n';
+'Referencia usuario Seycon que debe recoger la notificaci?n';
 
 comment on column ZPE_NOTTEL.NOT_NUMREG is
-'Indica el n� de registro de salida';
+'Indica el n? de registro de salida';
 
 comment on column ZPE_NOTTEL.NOT_FECHA is
 'Fecha de registro de salida';
 
 comment on column ZPE_NOTTEL.NOT_CODASI is
-'C�digo de la referencia RDS del asiento';
+'C?digo de la referencia RDS del asiento';
 
 comment on column ZPE_NOTTEL.NOT_CLAASI is
 'Clave de la referencia RDS del asiento';
 
 comment on column ZPE_NOTTEL.NOT_CODJUS is
-'C�digo de la referencia RDS del justificante';
+'C?digo de la referencia RDS del justificante';
 
 comment on column ZPE_NOTTEL.NOT_CLAJUS is
 'Clave de la referencia RDS del justificante';
 
 comment on column ZPE_NOTTEL.NOT_CODAVI is
-'C�digo de la referencia RDS del aviso de notificacion';
+'C?digo de la referencia RDS del aviso de notificacion';
 
 comment on column ZPE_NOTTEL.NOT_CLAAVI is
 'Clave de la referencia  RDS del aviso de notificacion';
@@ -766,7 +766,7 @@ comment on column ZPE_NOTTEL.NOT_TITAVI is
 'Titulo aviso (cacheamos para optimizar visualizacion listas)';
 
 comment on column ZPE_NOTTEL.NOT_CODOFR is
-'C�digo de la referencia RDS del oficio de remision';
+'C?digo de la referencia RDS del oficio de remision';
 
 comment on column ZPE_NOTTEL.NOT_CLAOFR is
 'Clave de la referencia RDS del oficio de remision';
@@ -775,10 +775,10 @@ comment on column ZPE_NOTTEL.NOT_IDIOMA is
 'Idioma en el que se ha realizado';
 
 comment on column ZPE_NOTTEL.NOT_NIFRTE is
-'Indica NIF del representante (Quien debe recoger la notificaci�n)';
+'Indica NIF del representante (Quien debe recoger la notificaci?n)';
 
 comment on column ZPE_NOTTEL.NOT_NOMRTE is
-'Indica nombre del representante (Quien debe recoger la notificaci�n)';
+'Indica nombre del representante (Quien debe recoger la notificaci?n)';
 
 comment on column ZPE_NOTTEL.NOT_NIFRDO is
 'En caso de existir representado, indica NIF del representado';
@@ -787,7 +787,7 @@ comment on column ZPE_NOTTEL.NOT_NOMRDO is
 'En caso de existir representado, indica nombre del representado';
 
 comment on column ZPE_NOTTEL.NOT_CODACU is
-'En caso de que se haya firmado el acuse de recibo, indica el c�digo de la referencia RDS del aviso de notificacion';
+'En caso de que se haya firmado el acuse de recibo, indica el c?digo de la referencia RDS del aviso de notificacion';
 
 comment on column ZPE_NOTTEL.NOT_CLAACU is
 'En caso de que se haya firmado el acuse de recibo, indica la clave de la referencia RDS del aviso de notificacion';
@@ -802,16 +802,16 @@ comment on column ZPE_NOTTEL.NOT_SEYGES is
 'Indica usuario seycon del gestor que da de alta la notificacion';
 
 comment on column ZPE_NOTTEL.NOT_SUBDES is
-'En caso de que haya tr�mite de subsanaci�n indica la descripci�n del tr�mite';
+'En caso de que haya tr?mite de subsanaci?n indica la descripci?n del tr?mite';
 
 comment on column ZPE_NOTTEL.NOT_SUBIDE is
-'En caso de que haya tr�mite de subsanaci�n indica el id del tr�mite';
+'En caso de que haya tr?mite de subsanaci?n indica el id del tr?mite';
 
 comment on column ZPE_NOTTEL.NOT_SUBVER is
-'En caso de que haya tr�mite de subsanaci�n indica la versi�n del tr�mite';
+'En caso de que haya tr?mite de subsanaci?n indica la versi?n del tr?mite';
 
 comment on column ZPE_NOTTEL.NOT_SUBPAR is
-'En caso de que haya tr�mite de subsanaci�n indica los par�metros de inicio del tr�mite';
+'En caso de que haya tr?mite de subsanaci?n indica los par?metros de inicio del tr?mite';
 
 alter table ZPE_NOTTEL
    add constraint ZPE_NOT_PK primary key (NOT_CODIGO);
@@ -844,22 +844,22 @@ create table ZPE_PERSON  (
 );
 
 comment on table ZPE_PERSON is
-'Informaci�n personal de los usuarios de la zona personal. Dirigida tanto a personas f�sicas como jur�dicas.';
+'Informaci?n personal de los usuarios de la zona personal. Dirigida tanto a personas f?sicas como jur?dicas.';
 
 comment on column ZPE_PERSON.PER_CODIGO is
-'Identificador �nico de la persona en la pad';
+'Identificador ?nico de la persona en la pad';
 
 comment on column ZPE_PERSON.PER_SEYCON is
-'Codigo seycon de la persona. Es �nico.';
+'Codigo seycon de la persona. Es ?nico.';
 
 comment on column ZPE_PERSON.PER_IDENTI is
-'Documento legal de identificaci�n de la persona ( NIF, CIF, NIE ).';
+'Documento legal de identificaci?n de la persona ( NIF, CIF, NIE ).';
 
 comment on column ZPE_PERSON.PER_TIPPER is
-'F - Persona fisica, J - Persona jur�dica.';
+'F - Persona fisica, J - Persona jur?dica.';
 
 comment on column ZPE_PERSON.PER_NOMBRE is
-'Nombre de la persona. En caso de personas jur�dicas, nombre de la empresa o entidad';
+'Nombre de la persona. En caso de personas jur?dicas, nombre de la empresa o entidad';
 
 comment on column ZPE_PERSON.PER_APELL1 is
 'Primer apellido de la persona.';
@@ -871,34 +871,34 @@ comment on column ZPE_PERSON.PER_FECALT is
 'Fecha de alta de la persona';
 
 comment on column ZPE_PERSON.PER_FECULM is
-'Fecha de �ltima modificaci�n de la persona';
+'Fecha de ?ltima modificaci?n de la persona';
 
 comment on column ZPE_PERSON.PER_DIR is
-'Direcci�n';
+'Direcci?n';
 
 comment on column ZPE_PERSON.PER_CPOSTAL is
-'C�digo postal';
+'C?digo postal';
 
 comment on column ZPE_PERSON.PER_PROV is
-'C�digo provincia';
+'C?digo provincia';
 
 comment on column ZPE_PERSON.PER_MUNI is
-'C�digo municipio';
+'C?digo municipio';
 
 comment on column ZPE_PERSON.PER_TELF is
-'Tel�fono fijo';
+'Tel?fono fijo';
 
 comment on column ZPE_PERSON.PER_TELM is
-'Tel�fono m�vil';
+'Tel?fono m?vil';
 
 comment on column ZPE_PERSON.PER_EMAIL is
-'Correo electr�nico';
+'Correo electr?nico';
 
 comment on column ZPE_PERSON.PER_AVIEXP is
 'Avisos sobre expedienes (notificaciones,eventos,etc)';
 
 comment on column ZPE_PERSON.PER_AVITRA is
-'Avisos 3 d�as antes del plazo borrado tr�mite persistente';
+'Avisos 3 d?as antes del plazo borrado tr?mite persistente';
 
 comment on column ZPE_PERSON.PER_DELEGA is
 'Indica si esta habilitada la delegacion';
@@ -954,13 +954,13 @@ create table ZPE_PREBCK  (
 
 
 comment on table ZPE_PREBCK is
-'Log de preregistro (regsitros y env�os) backup';
+'Log de preregistro (regsitros y env?os) backup';
 
 comment on column ZPE_PREBCK.PRB_CODIGO is
-'C�digo interno entrada';
+'C?digo interno entrada';
 
 comment on column ZPE_PREBCK.PRB_NUMPRE is
-'N�mero de preregistro / preenvio generado por Sistema de Tramitaci�n';
+'N?mero de preregistro / preenvio generado por Sistema de Tramitaci?n';
 
 comment on column ZPE_PREBCK.PRB_IDIOMA is
 'Idioma en el que se ha realizado';
@@ -969,40 +969,40 @@ comment on column ZPE_PREBCK.PRB_FECHA is
 'Fecha de preregistro';
 
 comment on column ZPE_PREBCK.PRB_FECCAD is
-'Fecha tope para realizar la confirmaci�n';
+'Fecha tope para realizar la confirmaci?n';
 
 comment on column ZPE_PREBCK.PRB_IDEPER is
 'IDENTIFICADOR DE PERSISTENCIA. ';
 
 comment on column ZPE_PREBCK.PRB_DESC is
-'Descripci�n del tr�mite';
+'Descripci?n del tr?mite';
 
 comment on column ZPE_PREBCK.PRB_TIPO is
-'Tipo de entrada: P (PreRegistro Entrada) / N (PreEnv�o Bandeja)';
+'Tipo de entrada: P (PreRegistro Entrada) / N (PreEnv?o Bandeja)';
 
 comment on column ZPE_PREBCK.PRB_NIVAUT is
-'Nivel autenticaci�n U (Usuario) / C (Certificado) / A (An�nimo)';
+'Nivel autenticaci?n U (Usuario) / C (Certificado) / A (An?nimo)';
 
 comment on column ZPE_PREBCK.PRB_USER is
 'En caso de estar autenticado referencia usuario Seycon';
 
 comment on column ZPE_PREBCK.PRB_CODASI is
-'C�digo de la referencia RDS del asiento';
+'C?digo de la referencia RDS del asiento';
 
 comment on column ZPE_PREBCK.PRB_CLAASI is
 'Clave de la referencia RDS del asiento';
 
 comment on column ZPE_PREBCK.PRB_CODJUS is
-'C�digo de la referencia RDS del justificante';
+'C?digo de la referencia RDS del justificante';
 
 comment on column ZPE_PREBCK.PRB_CLAJUS is
 'Clave de la referencia RDS del justificante';
 
 comment on column ZPE_PREBCK.PRB_NUMREG is
-'Cuando se confirme el preregistro indica el n� de registro / env�o confirmado ';
+'Cuando se confirme el preregistro indica el n? de registro / env?o confirmado ';
 
 comment on column ZPE_PREBCK.PRB_FECREG is
-'Fecha de la confirmaci�n del registro / env�o. Un preregistro estar� confirmado si tiene alimentada esta fecha.';
+'Fecha de la confirmaci?n del registro / env?o. Un preregistro estar? confirmado si tiene alimentada esta fecha.';
 
 comment on column ZPE_PREBCK.PRB_NIFRTE is
 'Indica NIF del representante';
@@ -1017,10 +1017,10 @@ comment on column ZPE_PREBCK.PRB_NOMRDO is
 'En caso de existir representado, indica nombre del representado';
 
 comment on column ZPE_PREBCK.PRB_TRAMOD is
-'MODELO TRAMITE (Permite nulos ya que es un campo a�adido a posteriori)';
+'MODELO TRAMITE (Permite nulos ya que es un campo a?adido a posteriori)';
 
 comment on column ZPE_PREBCK.PRB_TRAVER is
-'VERSION TRAMITE (Permite nulos ya que es un campo a�adido a posteriori)';
+'VERSION TRAMITE (Permite nulos ya que es un campo a?adido a posteriori)';
 
 comment on column ZPE_PREBCK.PRB_CONAUT is
 'Indica si el preregistro se ha confirmado automaticamente';
@@ -1091,13 +1091,13 @@ create table ZPE_PREREG  (
 
 
 comment on table ZPE_PREREG is
-'Log de preregistro (regsitros y env�os)';
+'Log de preregistro (regsitros y env?os)';
 
 comment on column ZPE_PREREG.PRE_CODIGO is
-'C�digo interno entrada';
+'C?digo interno entrada';
 
 comment on column ZPE_PREREG.PRE_NUMPRE is
-'N�mero de preregistro / preenvio generado por Sistema de Tramitaci�n';
+'N?mero de preregistro / preenvio generado por Sistema de Tramitaci?n';
 
 comment on column ZPE_PREREG.PRE_IDIOMA is
 'Idioma en el que se ha realizado';
@@ -1106,40 +1106,40 @@ comment on column ZPE_PREREG.PRE_FECHA is
 'Fecha de preregistro';
 
 comment on column ZPE_PREREG.PRE_FECCAD is
-'Fecha tope para realizar la confirmaci�n';
+'Fecha tope para realizar la confirmaci?n';
 
 comment on column ZPE_PREREG.PRE_IDEPER is
 'IDENTIFICADOR DE PERSISTENCIA. ';
 
 comment on column ZPE_PREREG.PRE_DESC is
-'Descripci�n del tr�mite';
+'Descripci?n del tr?mite';
 
 comment on column ZPE_PREREG.PRE_TIPO is
-'Tipo de entrada: P (PreRegistro Entrada) / N (PreEnv�o Bandeja)';
+'Tipo de entrada: P (PreRegistro Entrada) / N (PreEnv?o Bandeja)';
 
 comment on column ZPE_PREREG.PRE_NIVAUT is
-'Nivel autenticaci�n U (Usuario) / C (Certificado) / A (An�nimo)';
+'Nivel autenticaci?n U (Usuario) / C (Certificado) / A (An?nimo)';
 
 comment on column ZPE_PREREG.PRE_USER is
 'En caso de estar autenticado referencia usuario Seycon';
 
 comment on column ZPE_PREREG.PRE_CODASI is
-'C�digo de la referencia RDS del asiento';
+'C?digo de la referencia RDS del asiento';
 
 comment on column ZPE_PREREG.PRE_CLAASI is
 'Clave de la referencia RDS del asiento';
 
 comment on column ZPE_PREREG.PRE_CODJUS is
-'C�digo de la referencia RDS del justificante';
+'C?digo de la referencia RDS del justificante';
 
 comment on column ZPE_PREREG.PRE_CLAJUS is
 'Clave de la referencia RDS del justificante';
 
 comment on column ZPE_PREREG.PRE_NUMREG is
-'Cuando se confirme el preregistro indica el n� de registro / env�o confirmado ';
+'Cuando se confirme el preregistro indica el n? de registro / env?o confirmado ';
 
 comment on column ZPE_PREREG.PRE_FECREG is
-'Fecha de la confirmaci�n del registro / env�o. Un preregistro estar� confirmado si tiene alimentada esta fecha.';
+'Fecha de la confirmaci?n del registro / env?o. Un preregistro estar? confirmado si tiene alimentada esta fecha.';
 
 comment on column ZPE_PREREG.PRE_NIFRTE is
 'Indica NIF del representante';
@@ -1154,10 +1154,10 @@ comment on column ZPE_PREREG.PRE_NOMRDO is
 'En caso de existir representado, indica nombre del representado';
 
 comment on column ZPE_PREREG.PRE_TRAMOD is
-'MODELO TRAMITE (Permite nulos ya que es un campo a�adido a posteriori)';
+'MODELO TRAMITE (Permite nulos ya que es un campo a?adido a posteriori)';
 
 comment on column ZPE_PREREG.PRE_TRAVER is
-'VERSION TRAMITE (Permite nulos ya que es un campo a�adido a posteriori)';
+'VERSION TRAMITE (Permite nulos ya que es un campo a?adido a posteriori)';
 
 comment on column ZPE_PREREG.PRE_CONAUT is
 'Indica si el preregistro se ha confirmado automaticamente';
@@ -1234,7 +1234,7 @@ comment on column ZPE_RPAGOS.PAG_LOCALI is
 'Localizador sesion de pago';
 
 comment on column ZPE_RPAGOS.PAG_NOMTRA is
-'Nombre del tr�mite';
+'Nombre del tr?mite';
 
 comment on column ZPE_RPAGOS.PAG_MODELO is
 'Modelo tasa';
@@ -1276,7 +1276,7 @@ comment on column ZPE_RPAGOS.PAG_URLSTR is
 'Url retorno a SISTRA';
 
 comment on column ZPE_RPAGOS.PAG_URLMNT is
-'Url mantenimiento sesi�n SISTRA';
+'Url mantenimiento sesi?n SISTRA';
 
 comment on column ZPE_RPAGOS.PAG_TOKEN is
 'Token sesion pago portal contribuent';
@@ -1297,13 +1297,13 @@ comment on column ZPE_RPAGOS.PAG_FINAL is
 'Indica si el pago ha finalizado';
 
 comment on column ZPE_RPAGOS.PAG_IDETRA is
-'Identificador del tr�mite (Id persistencia)';
+'Identificador del tr?mite (Id persistencia)';
 
 comment on column ZPE_RPAGOS.PAG_MODTRA is
-'Modelo del tr�mite';
+'Modelo del tr?mite';
 
 comment on column ZPE_RPAGOS.PAG_VERTRA is
-'Versi�n del tr�mite';
+'Versi?n del tr?mite';
 
 
 alter table ZPE_RPAGOS
@@ -1350,13 +1350,13 @@ comment on column ZPE_TPEBCK.TPB_USER is
 'USUARIO (SOLO PARA NIVELES C Y U)';
 
 comment on column ZPE_TPEBCK.TPB_FECINI is
-'FECHA CREACIÓN';
+'FECHA CREACI�N';
 
 comment on column ZPE_TPEBCK.TPB_FECMOD is
 'FECHA ULTIMA MODIFICACION';
 
 comment on column ZPE_TPEBCK.TPB_PARINI is
-'PARAMETROS DE INICIO DEL TRAMITE (PARAMETROS QUE APARECEN EN LA REQUEST AL INICIAR EL TR��MITE)';
+'PARAMETROS DE INICIO DEL TRAMITE (PARAMETROS QUE APARECEN EN LA REQUEST AL INICIAR EL TR??MITE)';
 
 comment on column ZPE_TPEBCK.TPB_FECCAD is
 'FECHA DE CADUCIDAD CALCULADA A PARTIR DE LOS DIAS DE PERSISTENCIA';
@@ -1365,7 +1365,7 @@ comment on column ZPE_TPEBCK.TPB_IDIOMA is
 'IDIOMA DEL TRAMITE';
 
 comment on column ZPE_TPEBCK.TPB_FLUTRA is
-'USUARIO QUE ESTA COMPLETANDO EL TR��MITE (SOLO PARA NIVELES C Y U) ';
+'USUARIO QUE ESTA COMPLETANDO EL TR??MITE (SOLO PARA NIVELES C Y U) ';
 
 alter table ZPE_TPEBCK
    add constraint ZPE_TPB_PK primary key (TPB_CODIGO);
@@ -1413,16 +1413,16 @@ comment on column ZPE_TRAPER.TPE_NIVAUT is
 'NIVEL AUTENTICACION (C/U/A)';
 
 comment on column ZPE_TRAPER.TPE_USER is
-'USUARIO QUE INICIA EL TRÁMITE (SOLO PARA NIVELES C Y U) ';
+'USUARIO QUE INICIA EL TR�MITE (SOLO PARA NIVELES C Y U) ';
 
 comment on column ZPE_TRAPER.TPE_FECINI is
-'FECHA CREACIӓN';
+'FECHA CREACI?N';
 
 comment on column ZPE_TRAPER.TPE_FECMOD is
 'FECHA ULTIMA MODIFICACION';
 
 comment on column ZPE_TRAPER.TPE_PARINI is
-'PARAMETROS DE INICIO DEL TRAMITE (PARAMETROS QUE APARECEN EN LA REQUEST AL INICIAR EL TR��MITE)';
+'PARAMETROS DE INICIO DEL TRAMITE (PARAMETROS QUE APARECEN EN LA REQUEST AL INICIAR EL TR??MITE)';
 
 comment on column ZPE_TRAPER.TPE_FECCAD is
 'FECHA DE CADUCIDAD CALCULADA A PARTIR DE LOS DIAS DE PERSISTENCIA';
@@ -1431,7 +1431,7 @@ comment on column ZPE_TRAPER.TPE_IDIOMA is
 'IDIOMA DEL TRAMITE';
 
 comment on column ZPE_TRAPER.TPE_FLUTRA is
-'USUARIO QUE ESTA COMPLETANDO EL TR��MITE (SOLO PARA NIVELES C Y U) ';
+'USUARIO QUE ESTA COMPLETANDO EL TR??MITE (SOLO PARA NIVELES C Y U) ';
 
 comment on column ZPE_TRAPER.TPE_DELEGA is
 'USUARIO QUE  ESTA EFECTUANDO DE EL TRAMITE DE FORMA DELEGADA  (SOLO PARA NIVEL C Y U)';
@@ -1497,25 +1497,25 @@ create table ZPE_REGEXT  (
    REG_NOMRDO           character varying(500)
 );
 comment on table ZPE_REGEXT is
-'Log de entradas telem�ticas';
+'Log de entradas telem?ticas';
 comment on column ZPE_REGEXT.REG_CODIGO is
-'C�digo interno entrada';
+'C?digo interno entrada';
 comment on column ZPE_REGEXT.REG_NIVAUT is
-'Nivel autenticaci�n usuario para el que se realiza el registro(OPCIONAL): U (Usuario) / C (Certificado) / A (An�nimo)';
+'Nivel autenticaci?n usuario para el que se realiza el registro(OPCIONAL): U (Usuario) / C (Certificado) / A (An?nimo)';
 comment on column ZPE_REGEXT.REG_DESC is
-'Descripci�n del tr�mite';
+'Descripci?n del tr?mite';
 comment on column ZPE_REGEXT.REG_USER is
 'En caso de estar autenticado referencia usuario Seycon que realiza la entrada';
 comment on column ZPE_REGEXT.REG_NUMREG is
-'Indica el n� de registro/n� de env�o';
+'Indica el n? de registro/n? de env?o';
 comment on column ZPE_REGEXT.REG_FECHA is
-'Fecha de registro / env�o';
+'Fecha de registro / env?o';
 comment on column ZPE_REGEXT.REG_CODASI is
-'C�digo de la referencia RDS del asiento';
+'C?digo de la referencia RDS del asiento';
 comment on column ZPE_REGEXT.REG_CLAASI is
 'Clave de la referencia RDS del asiento';
 comment on column ZPE_REGEXT.REG_CODJUS is
-'C�digo de la referencia RDS del justificante';
+'C?digo de la referencia RDS del justificante';
 comment on column ZPE_REGEXT.REG_CLAJUS is
 'Clave de la referencia RDS del justificante';
 comment on column ZPE_REGEXT.REG_IDIOMA is
@@ -1542,17 +1542,17 @@ create table ZPE_DOCREG  (
    DRE_RDSCLA           character varying(10)                    not null
 );
 comment on column ZPE_DOCREG.DRE_CODIGO is
-'C�digo interno';
+'C?digo interno';
 comment on column ZPE_DOCREG.DRE_CODREG is
-'C�digo entrada registro tramites no sistra';
+'C?digo entrada registro tramites no sistra';
 comment on column ZPE_DOCREG.DRE_DOCIDE is
 'Identificador documento';
 comment on column ZPE_DOCREG.DRE_DOCNUM is
-'N�mero instancia';
+'N?mero instancia';
 comment on column ZPE_DOCREG.DRE_DESC is
-'Descripci�n documento';
+'Descripci?n documento';
 comment on column ZPE_DOCREG.DRE_RDSCOD is
-'C�digo RDS del documento';
+'C?digo RDS del documento';
 comment on column ZPE_DOCREG.DRE_RDSCLA is
 'Clave RDS del documento';
 alter table ZPE_DOCREG
@@ -1574,7 +1574,7 @@ create table ZPE_REGLOG  (
 );
 
 comment on table ZPE_REGLOG is
-'Log de entradas telem�ticas';
+'Log de entradas telem?ticas';
 comment on column ZPE_REGLOG.RLG_TIPREG is
 'Tipo de registro  Entrada (E) / Salida (S)';
 comment on column ZPE_REGLOG.RLG_NUMREG is
@@ -1582,7 +1582,7 @@ comment on column ZPE_REGLOG.RLG_NUMREG is
 comment on column ZPE_REGLOG.RLG_FECREG is
 'Fecha de registro';
 comment on column ZPE_REGLOG.RLG_ERROR is
-'descripci�n del error al dar de alta en registro';
+'descripci?n del error al dar de alta en registro';
 alter table ZPE_REGLOG
    add constraint ZPE_RLG_PK primary key (RLG_TIPREG, RLG_NUMREG);
 
@@ -1657,7 +1657,7 @@ comment on table ZPE_SUBPAR is
 'PARAMETROS DE INICIO DE TRAMITE DE SUBSANACION';
 
 comment on column ZPE_SUBPAR.SBP_CODIGO is
-'Codigo de acceso par�metros inicio tr�mite subsanaci�n';
+'Codigo de acceso par?metros inicio tr?mite subsanaci?n';
 
 comment on column ZPE_SUBPAR.SBP_UNIADM is
 'Unidad administrativa que da de alta el expediente';
@@ -1685,10 +1685,10 @@ create table ZPE_RGPEXT  (
 );
 
 comment on table ZPE_RGPEXT is
-'Log de preparaci�n de asientos para firmar y registrar con posterioridad (para registros de entrada externos, es decir no realizados por Sistra)';
+'Log de preparaci?n de asientos para firmar y registrar con posterioridad (para registros de entrada externos, es decir no realizados por Sistra)';
 
 comment on column ZPE_RGPEXT.RGP_RDSCOD is
-'C�digo RDS del asiento';
+'C?digo RDS del asiento';
 
 comment on column ZPE_RGPEXT.RGP_RDSCLA is
 'Clave RDS del asiento';
@@ -1703,7 +1703,7 @@ comment on column ZPE_RGPEXT.RGP_FECINI is
 'Fecha en la que se ha preparado el asiento';
 
 comment on column ZPE_RGPEXT.RGP_FECFIN is
-'Fecha en la que se si no es registrado el asiento se eliminar�';
+'Fecha en la que se si no es registrado el asiento se eliminar?';
 
 alter table ZPE_RGPEXT
    add constraint ZPE_RGP_PK primary key (RGP_RDSCOD);
@@ -1723,7 +1723,7 @@ create table ZPE_INDELE  (
 );
 
 comment on table ZPE_INDELE is
-'Indices de b�squeda asociadas a elementos de un expediente (solo para autenticados)';
+'Indices de b?squeda asociadas a elementos de un expediente (solo para autenticados)';
 
 comment on column ZPE_INDELE.IND_CODIGO is
 'Codigo interno';
@@ -1756,7 +1756,7 @@ create index ZPE_INDELE_IDX on ZPE_INDELE (
 alter table ZPE_EXPEDI add EXP_TIPO character varying(1);
 
 comment on column ZPE_EXPEDI.EXP_TIPO is
-'Tipo expediente: E (Expediente real) / V (Expediente virtual de una entrada para la que a�n no se ha generado expediente)';
+'Tipo expediente: E (Expediente real) / V (Expediente virtual de una entrada para la que a?n no se ha generado expediente)';
 
 alter table ZPE_EXPEDI alter column EXP_TIPO set not null;
 
@@ -1786,7 +1786,7 @@ create unique index ZPE_ELEIDP_UNI on ZPE_ELEEX (
 alter table ZPE_ELEEX add ELE_ACCEXP BOOLEAN default false not null;
 
 comment on column ZPE_ELEEX.ELE_ACCEXP is
-'Indica si elemento proporciona acceso a expediente de forma an�nima a traves de su id persistencia';
+'Indica si elemento proporciona acceso a expediente de forma an?nima a traves de su id persistencia';
 
 /* ACCESO ANONIMO NOTIF POR CLAVE */
 ALTER table ZPE_NOTTEL ADD NOT_ACCCLA  BOOLEAN default false not null;
@@ -1827,7 +1827,7 @@ ALTER table ZPE_DPEBCK ADD DPB_DLGFIR           character varying(4000);
 ALTER table ZPE_DPEBCK  ADD DPB_DLGFIP           character varying(4000);
 
 comment on column ZPE_DPEBCK.DPB_GENDES is
-'DESCRIPCION PERSONALIZADA PARA GENɉRICOS';
+'DESCRIPCION PERSONALIZADA PARA GEN?RICOS';
 
 comment on column ZPE_DPEBCK.DPB_DLGEST is
 'ESTADO DE DELEGACION: PASO A FIRMA DOCUMENTO';
