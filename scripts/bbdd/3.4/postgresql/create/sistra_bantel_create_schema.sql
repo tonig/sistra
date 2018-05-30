@@ -1696,18 +1696,6 @@ ALTER TABLE ONLY bte_valcfu
     ADD CONSTRAINT bte_vcffif_fk FOREIGN KEY (vcf_codfif) REFERENCES bte_filfue(fif_codigo);
 
 
---
--- TOC entry 1905 (class 0 OID 0)
--- Dependencies: 3
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
 -- Completed on 2014-01-27 08:50:51
 
 --

@@ -532,18 +532,6 @@ ALTER TABLE ONLY aud_tipoev
     ADD CONSTRAINT aud_tipmod_fk FOREIGN KEY (tip_modul) REFERENCES aud_modul(mod_modul);
 
 
---
--- TOC entry 1804 (class 0 OID 0)
--- Dependencies: 3
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
 -- Completed on 2014-01-27 08:29:11
 
 --

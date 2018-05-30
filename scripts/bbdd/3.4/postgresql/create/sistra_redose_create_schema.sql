@@ -1856,18 +1856,6 @@ ALTER TABLE ONLY rds_vers
     ADD CONSTRAINT rds_vermod_fk FOREIGN KEY (ver_codmod) REFERENCES rds_modelo(mod_codigo);
 
 
---
--- TOC entry 1957 (class 0 OID 0)
--- Dependencies: 3
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
 -- Completed on 2014-01-27 09:17:29
 
 --

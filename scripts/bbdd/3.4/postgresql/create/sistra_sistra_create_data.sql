@@ -267,7 +267,7 @@ INSERT INTO str_domin (dom_codigo, dom_identi, dom_tipo, dom_url, dom_sql, dom_j
 -- Data for Name: str_gesfrm; Type: TABLE DATA; Schema: public; Owner: sistra
 --
 
-INSERT INTO str_gesfrm (gsf_ident, gsf_desc, gsf_url, gsf_urltra, gsf_urlred) VALUES ('forms', 'FORMS', '@sistra.url@', '@forms.server@/formfront/iniciTelematic.do', '/formfront/continuacioTelematic.do');
+INSERT INTO str_gesfrm (gsf_ident, gsf_desc, gsf_url, gsf_urltra, gsf_urlred) VALUES ('forms', 'FORMS', '@sistra.url@', '@forms.server@/sistrafront/formfront/iniciTelematic.do', '/sistrafront/formfront/continuacioTelematic.do');
 
 
 --

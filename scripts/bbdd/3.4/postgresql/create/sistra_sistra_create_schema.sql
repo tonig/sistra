@@ -3378,18 +3378,6 @@ ALTER TABLE ONLY str_usutra
     ADD CONSTRAINT str_usttra_fk FOREIGN KEY (ust_codtra) REFERENCES str_tramit(tra_codigo);
 
 
---
--- TOC entry 2061 (class 0 OID 0)
--- Dependencies: 3
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
 -- Completed on 2014-01-27 09:22:56
 
 --
