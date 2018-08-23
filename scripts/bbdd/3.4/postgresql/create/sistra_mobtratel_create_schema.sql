@@ -98,7 +98,7 @@ create table MOB_MSEMAI  (
    MSE_HTML             BOOLEAN                      default FALSE not null,
    MSE_EMAILS           BYTEA                            not null,
    MSE_ERROR            character varying(500),
-   MSE_ESTADO           BOOLEAN                       not null,
+   MSE_ESTADO           SMALLINT                       not null,
    MSE_INIENV           timestamp with time zone,
    MSE_FINENV           timestamp with time zone,
    MSE_NDEST            BIGINT,
