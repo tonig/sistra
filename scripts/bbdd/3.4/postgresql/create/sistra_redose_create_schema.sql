@@ -150,7 +150,7 @@ COMMENT ON COLUMN rds_docum.doc_seycon IS 'USUARIO SEYCON DE LA PERSONA QUE HA S
 -- Name: COLUMN rds_docum.doc_uniadm; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_docum.doc_uniadm IS 'UNIDAD ADMINISTRATIVA RESPONSABLE DEL DOCUMENTO. ESTE CÃ“DIGO PROVIENE DEL SAC (TABLA RSC_UNIADM)';
+COMMENT ON COLUMN rds_docum.doc_uniadm IS 'UNIDAD ADMINISTRATIVA RESPONSABLE DEL DOCUMENTO. ESTE CÓDIGO PROVIENE DEL SAC (TABLA RSC_UNIADM)';
 
 
 --
@@ -159,7 +159,7 @@ COMMENT ON COLUMN rds_docum.doc_uniadm IS 'UNIDAD ADMINISTRATIVA RESPONSABLE DEL
 -- Name: COLUMN rds_docum.doc_codubi; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_docum.doc_codubi IS 'CODIGO UBICACIÃ“N DONDE ESTA ALMACENADO';
+COMMENT ON COLUMN rds_docum.doc_codubi IS 'CODIGO UBICACIÓN DONDE ESTA ALMACENADO';
 
 
 --
@@ -177,7 +177,7 @@ COMMENT ON COLUMN rds_docum.doc_ficher IS 'NOMBRE FICHERO';
 -- Name: COLUMN rds_docum.doc_ext; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_docum.doc_ext IS 'EXTENSIÃ“N DEL FICHERO';
+COMMENT ON COLUMN rds_docum.doc_ext IS 'EXTENSIÓN DEL FICHERO';
 
 
 --
@@ -195,7 +195,7 @@ COMMENT ON COLUMN rds_docum.doc_hash IS 'HASH DEL DOCUMENTO. SE CALCULARA POR EL
 -- Name: COLUMN rds_docum.doc_codpla; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_docum.doc_codpla IS 'PLANTILLA  ESPECIFICA DE VISUALIZACIÃ“N. PODEMOS INDICAR QUE UN DOCUMENTO ESTRUCTURADO SE VISUALIZE CON UNA PLANTILLA DETERMINADA';
+COMMENT ON COLUMN rds_docum.doc_codpla IS 'PLANTILLA  ESPECIFICA DE VISUALIZACIÓN. PODEMOS INDICAR QUE UN DOCUMENTO ESTRUCTURADO SE VISUALIZE CON UNA PLANTILLA DETERMINADA';
 
 
 --
@@ -213,7 +213,7 @@ COMMENT ON COLUMN rds_docum.doc_delete IS 'MARCADO PARA BORRAR POR PROCESO DE BO
 -- Name: COLUMN rds_docum.doc_idioma; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_docum.doc_idioma IS 'PARA DOCUMENTOS ESTRUCTURADOS INDICA EL IDIOMA POR DEFECTO DE VISUALIZACIÃ“N. SI NO SE ESPECIFICA COGERA "CA".';
+COMMENT ON COLUMN rds_docum.doc_idioma IS 'PARA DOCUMENTOS ESTRUCTURADOS INDICA EL IDIOMA POR DEFECTO DE VISUALIZACIÓN. SI NO SE ESPECIFICA COGERA "CA".';
 
 
 --
@@ -249,7 +249,7 @@ CREATE TABLE rds_ficext (
 -- Name: TABLE rds_ficext; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE rds_ficext IS 'UBICACIÓ“N EN REPOSITORIO DE FICHEROS EXTERNOS (PLUGIN UBICACION NO DEFECTO)';
+COMMENT ON TABLE rds_ficext IS 'UBICACI?N EN REPOSITORIO DE FICHEROS EXTERNOS (PLUGIN UBICACION NO DEFECTO)';
 
 
 --
@@ -317,7 +317,7 @@ CREATE TABLE rds_ficher (
 -- Name: TABLE rds_ficher; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE rds_ficher IS 'UBICACIï¿½N EN BD DE REPOSITORIO DE FICHEROS';
+COMMENT ON TABLE rds_ficher IS 'UBICACI?N EN BD DE REPOSITORIO DE FICHEROS';
 
 
 --
@@ -586,7 +586,7 @@ COMMENT ON COLUMN rds_logope.log_codigo IS 'CODIGO';
 -- Name: COLUMN rds_logope.log_codtop; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_logope.log_codtop IS 'CODIGO OPERACIÃ“N';
+COMMENT ON COLUMN rds_logope.log_codtop IS 'CODIGO OPERACIÓN';
 
 
 --
@@ -595,7 +595,7 @@ COMMENT ON COLUMN rds_logope.log_codtop IS 'CODIGO OPERACIÃ“N';
 -- Name: COLUMN rds_logope.log_desope; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_logope.log_desope IS 'DESCRIPCIÃ“N OPERACIÃ“N';
+COMMENT ON COLUMN rds_logope.log_desope IS 'DESCRIPCIÓN OPERACIÓN';
 
 
 --
@@ -604,7 +604,7 @@ COMMENT ON COLUMN rds_logope.log_desope IS 'DESCRIPCIÃ“N OPERACIÃ“N';
 -- Name: COLUMN rds_logope.log_fecha; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_logope.log_fecha IS 'FECHA OPERACIÃ“N';
+COMMENT ON COLUMN rds_logope.log_fecha IS 'FECHA OPERACIÓN';
 
 
 --
@@ -783,7 +783,7 @@ COMMENT ON COLUMN rds_planti.pla_codigo IS 'CODIGO';
 -- Name: COLUMN rds_planti.pla_codver; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_planti.pla_codver IS 'CODIGO VERSIÃ“N MODELO';
+COMMENT ON COLUMN rds_planti.pla_codver IS 'CODIGO VERSIÓN MODELO';
 
 
 --
@@ -801,7 +801,7 @@ COMMENT ON COLUMN rds_planti.pla_tipo IS 'TIPO PLANTILLA: HTM / PDF';
 -- Name: COLUMN rds_planti.pla_format; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_planti.pla_format IS 'FORMATEADOR: Clase que va a realizar la transformaciÃ³n a partir de la plantilla';
+COMMENT ON COLUMN rds_planti.pla_format IS 'FORMATEADOR: Clase que va a realizar la transformación a partir de la plantilla';
 
 
 --
@@ -1073,7 +1073,7 @@ COMMENT ON TABLE rds_tioper IS 'TIPOS DE OPERACIONES PERMITIDAS EN EL RDS:
 -- Name: COLUMN rds_tioper.top_codigo; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_tioper.top_codigo IS 'CODIGO OPERACIÃ“N';
+COMMENT ON COLUMN rds_tioper.top_codigo IS 'CODIGO OPERACIÓN';
 
 
 --
@@ -1082,7 +1082,7 @@ COMMENT ON COLUMN rds_tioper.top_codigo IS 'CODIGO OPERACIÃ“N';
 -- Name: COLUMN rds_tioper.top_nombre; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_tioper.top_nombre IS 'NOMBRE OPERACIÃ“N';
+COMMENT ON COLUMN rds_tioper.top_nombre IS 'NOMBRE OPERACIÓN';
 
 
 --
@@ -1112,7 +1112,7 @@ COMMENT ON TABLE rds_tiuso IS 'TIPOS DE USO:
  - RTE: REGISTRO TELEMATICO DE ENTRADA
  - RTS: REGISTRO TELEMATICO DE SALIDA
  - EXP: EXPEDIENTE
- - BTE: BANDEJA TELEMÃTICA DE ENTRADA
+ - BTE: BANDEJA TELEMÁTICA DE ENTRADA
  - PRE: PREREGISTRO
  - ENV: ENVIO
 ';
@@ -1159,7 +1159,7 @@ CREATE TABLE rds_ubica (
 -- Name: TABLE rds_ubica; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON TABLE rds_ubica IS 'UBICACIÃ“N DE LOS DOCUMENTOS';
+COMMENT ON TABLE rds_ubica IS 'UBICACIÓN DE LOS DOCUMENTOS';
 
 
 --
@@ -1177,7 +1177,7 @@ COMMENT ON COLUMN rds_ubica.ubi_codigo IS 'CODIGO';
 -- Name: COLUMN rds_ubica.ubi_ident; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_ubica.ubi_ident IS 'IDENTIFICADOR UBICACIÃ“N';
+COMMENT ON COLUMN rds_ubica.ubi_ident IS 'IDENTIFICADOR UBICACIÓN';
 
 
 --
@@ -1186,7 +1186,7 @@ COMMENT ON COLUMN rds_ubica.ubi_ident IS 'IDENTIFICADOR UBICACIÃ“N';
 -- Name: COLUMN rds_ubica.ubi_nombre; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_ubica.ubi_nombre IS 'NOMBRE UBICACIÃ“N';
+COMMENT ON COLUMN rds_ubica.ubi_nombre IS 'NOMBRE UBICACIÓN';
 
 
 --
@@ -1276,7 +1276,7 @@ COMMENT ON COLUMN rds_usos.uso_fecha IS 'FECHA ALTA USO. PROPORCIONADA POR RDS';
 -- Name: COLUMN rds_usos.uso_ref; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_usos.uso_ref IS 'REFERENCIA PROPORCIONADA SEGÃšN TIPO DE USO: RTE/TRS -> NUM.REGISTRO, EXP -> NUM EXPEDIENTE, TRA -> ID. PERSISTENCIA, ...';
+COMMENT ON COLUMN rds_usos.uso_ref IS 'REFERENCIA PROPORCIONADA SEGÚN TIPO DE USO: RTE/TRS -> NUM.REGISTRO, EXP -> NUM EXPEDIENTE, TRA -> ID. PERSISTENCIA, ...';
 
 
 --
@@ -1398,7 +1398,7 @@ COMMENT ON COLUMN rds_vers.ver_codmod IS 'CODIGO DEL MODELO VERSIONADO';
 -- Name: COLUMN rds_vers.ver_versio; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_vers.ver_versio IS 'IDENTIFICADOR VERSIÃ“N';
+COMMENT ON COLUMN rds_vers.ver_versio IS 'IDENTIFICADOR VERSIÓN';
 
 
 --
@@ -1407,7 +1407,7 @@ COMMENT ON COLUMN rds_vers.ver_versio IS 'IDENTIFICADOR VERSIÃ“N';
 -- Name: COLUMN rds_vers.ver_desc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN rds_vers.ver_desc IS 'DESCRIPCIÃ“N VERSIÃ“N';
+COMMENT ON COLUMN rds_vers.ver_desc IS 'DESCRIPCIÓN VERSIÓN';
 
 
 --
@@ -1854,18 +1854,6 @@ ALTER TABLE ONLY rds_usos
 
 ALTER TABLE ONLY rds_vers
     ADD CONSTRAINT rds_vermod_fk FOREIGN KEY (ver_codmod) REFERENCES rds_modelo(mod_codigo);
-
-
---
--- TOC entry 1957 (class 0 OID 0)
--- Dependencies: 3
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 -- Completed on 2014-01-27 09:17:29

@@ -1,4 +1,4 @@
-Ôªø
+
 create sequence MOB_SEQENV;
 
 create sequence MOB_SEQMSE;
@@ -25,10 +25,10 @@ comment on column MOB_CUENTA.CUE_NOMBRE is
 'NOMBRE DE LA CUENTA';
 
 comment on column MOB_CUENTA.CUE_EMAIL is
-'CUENTA EMAIL UTILIZADA PARA ENV√çOS TIPO EMAIL';
+'CUENTA EMAIL UTILIZADA PARA ENVÕOS TIPO EMAIL';
 
 comment on column MOB_CUENTA.CUE_SMS is
-'CUENTA PROVATO UTILIZADA PARA ENV√çOS TIPO SMS';
+'CUENTA PROVATO UTILIZADA PARA ENVÕOS TIPO SMS';
 
 comment on column MOB_CUENTA.CUE_DEFECT is
 'CUENTA POR DEFECTO';
@@ -50,7 +50,7 @@ create table MOB_ENVIOS  (
 );
 
 comment on table MOB_ENVIOS is
-'M√≥dulo de movilidad';
+'MÛdulo de movilidad';
 
 comment on column MOB_ENVIOS.ENV_ID is
 'IDENTIFICADOR DEL ENVIO';
@@ -78,7 +78,7 @@ comment on column MOB_ENVIOS.ENV_FCREG is
 
 comment on column MOB_ENVIOS.ENV_ESTADO is
 'ESTADO DEL ENVIO.
-0- Pendiente de env√≠o
+0- Pendiente de envÌo
 1- Enviado 
 2- Con Errores
 3- Cancelado

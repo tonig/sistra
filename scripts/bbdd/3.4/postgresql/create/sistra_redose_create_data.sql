@@ -128,10 +128,10 @@ SELECT pg_catalog.setval('rds_seqver', 11, true);
 
 INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (1, 'es.caib.redose.persistence.formateadores.FormateadorPdfFormularios', 'Formateador basado en plantillas PDF');
 INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (2, 'es.caib.redose.persistence.formateadores.FormateadorPdfPagos', 'Formateador basado en plantillas PDF para Justificantes de Pago');
-INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (3, 'es.caib.redose.persistence.formateadores.FormateadorPdfJustificante', 'Formateador espec铆fico para Justificante');
-INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (4, 'es.caib.redose.persistence.formateadores.FormateadorPdfJustificanteCopiaInteresado', 'Formateador espec铆fico para Justificante (copia interesado)');
+INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (3, 'es.caib.redose.persistence.formateadores.FormateadorPdfJustificante', 'Formateador espec韋ico para Justificante');
+INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (4, 'es.caib.redose.persistence.formateadores.FormateadorPdfJustificanteCopiaInteresado', 'Formateador espec韋ico para Justificante (copia interesado)');
 INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (5, 'es.caib.redose.persistence.formateadores.FormateadorPdfJasper', 'Formateador basado en reportes JasperReport');
-INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (6, 'es.caib.redose.persistence.formateadores.FormateadorPdfAsiento', 'Formateador espec铆fico para Asiento');
+INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (6, 'es.caib.redose.persistence.formateadores.FormateadorPdfAsiento', 'Formateador espec韋ico para Asiento');
 
 
 --
@@ -141,7 +141,7 @@ INSERT INTO rds_format (for_id, for_class, for_desc) VALUES (6, 'es.caib.redose.
 --
 
 INSERT INTO rds_idioma (idi_codigo, idi_nombre) VALUES ('es', 'Castellano');
-INSERT INTO rds_idioma (idi_codigo, idi_nombre) VALUES ('ca', 'Catal谩n');
+INSERT INTO rds_idioma (idi_codigo, idi_nombre) VALUES ('ca', 'Catal醤');
 
 
 --
@@ -153,13 +153,13 @@ INSERT INTO rds_idioma (idi_codigo, idi_nombre) VALUES ('ca', 'Catal谩n');
 INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (1, 'GE0001JUSTIF', 'Justificant', 'Justificante', 'S', 'N');
 INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (2, 'GE0002ASIENTO', 'ASIENTO REGISTRAL', 'ASIENTO REGISTRAL', 'S', 'N');
 INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (3, 'GE0003DATPROP', 'DATOS PROPIOS TRAMITE', 'DATOS PROPIOS TRAMITE', 'S', 'N');
-INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (4, 'GE0004DOCID', 'Documento de Identidad', 'Documento gen茅rico de identificaci贸n (NIF / NIE / CIF)', 'N', 'N');
-INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (5, 'GE0005ANEXGEN', 'Anexo gen茅rico', 'Documento para anexos gen茅ricos que no tienen un modelo particular o que no es interesante modelar de forma individual', 'N', 'N');
-INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (6, 'GE0006PAGO', 'Datos de Pago (Presencial y Telem谩tico)', 'Documento para datos del pago (independiente del tipo de pago)', 'S', 'N');
-INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (7, 'GE0008AVINOT', 'Aviso de notificacion', 'Modelo para aviso de notificaci贸n', 'S', 'N');
-INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (8, 'GE0009OFIREM', 'Oficio de remisi贸n', 'Oficio de remisi贸n para notificaciones', 'S', 'N');
+INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (4, 'GE0004DOCID', 'Documento de Identidad', 'Documento gen閞ico de identificaci髇 (NIF / NIE / CIF)', 'N', 'N');
+INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (5, 'GE0005ANEXGEN', 'Anexo gen閞ico', 'Documento para anexos gen閞icos que no tienen un modelo particular o que no es interesante modelar de forma individual', 'N', 'N');
+INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (6, 'GE0006PAGO', 'Datos de Pago (Presencial y Telem醫ico)', 'Documento para datos del pago (independiente del tipo de pago)', 'S', 'N');
+INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (7, 'GE0008AVINOT', 'Aviso de notificacion', 'Modelo para aviso de notificaci髇', 'S', 'N');
+INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (8, 'GE0009OFIREM', 'Oficio de remisi髇', 'Oficio de remisi髇 para notificaciones', 'S', 'N');
 INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (9, 'GE0011NOTIFICA', 'DOCUMENTO DE NOTIFICACION', 'DOCUMENTO ASOCIADO A UN REGISTRO DE SALIDA', 'N', 'N');
-INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (10, 'GE0012DELEGA', 'Autorizaci贸n de delegaci贸n', 'Autorizaci贸n de delegaci贸n', 'S', 'N');
+INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (10, 'GE0012DELEGA', 'Autorizaci髇 de delegaci髇', 'Autorizaci髇 de delegaci髇', 'S', 'N');
 INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc, mod_custod) VALUES (11, 'GE0013NOTIFEXT', 'Modelo documento externo notificacion', 'Usado para documentos externos de anexos de notificaciones y avisos en los que se indica una url al documento. En el redose se almacenara un xml con la url de acceso', 'S', 'N');
 
 
@@ -169,14 +169,14 @@ INSERT INTO rds_modelo (mod_codigo, mod_modelo, mod_nombre, mod_desc, mod_estruc
 -- Data for Name: rds_vers; Type: TABLE DATA; Schema: public; Owner: sistra
 --
 
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (1, 1, 1, 'Versi贸n 1');
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (2, 2, 1, 'Versi贸n 1');
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (3, 3, 1, 'Versi贸n 1');
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (4, 4, 1, 'Versi贸n 1');
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (5, 5, 1, 'Versi贸n 1');
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (6, 6, 1, 'Versi贸n 1');
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (7, 7, 1, 'Versi贸n 1');
-INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (8, 8, 1, 'Versi贸n 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (1, 1, 1, 'Versi髇 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (2, 2, 1, 'Versi髇 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (3, 3, 1, 'Versi髇 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (4, 4, 1, 'Versi髇 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (5, 5, 1, 'Versi髇 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (6, 6, 1, 'Versi髇 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (7, 7, 1, 'Versi髇 1');
+INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (8, 8, 1, 'Versi髇 1');
 INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (9, 9, 1, 'NOTIFICACION');
 INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (10, 10, 1, 'Version 1');
 INSERT INTO rds_vers (ver_codigo, ver_codmod, ver_versio, ver_desc) VALUES (11, 11, 1, 'VERSION 1');

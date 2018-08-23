@@ -153,7 +153,7 @@ COMMENT ON COLUMN aud_audit.aud_idper IS 'IDENTIFICADOR PERSISTENCIA';
 -- Name: COLUMN aud_audit.aud_clave; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_audit.aud_clave IS 'CLAVE (UTILIZADA SEG√öN TIPO EVENTO)';
+COMMENT ON COLUMN aud_audit.aud_clave IS 'CLAVE (UTILIZADA SEG⁄N TIPO EVENTO)';
 
 
 --
@@ -297,7 +297,7 @@ CREATE TABLE aud_modul (
 -- Name: COLUMN aud_modul.mod_modul; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_modul.mod_modul IS 'Identificador del m√≥dulo';
+COMMENT ON COLUMN aud_modul.mod_modul IS 'Identificador del mÛdulo';
 
 
 --
@@ -306,7 +306,7 @@ COMMENT ON COLUMN aud_modul.mod_modul IS 'Identificador del m√≥dulo';
 -- Name: COLUMN aud_modul.mod_desc; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_modul.mod_desc IS 'Descripcion del m√≥dulo que aparecer√° en la aplicaci√≥n de auditoria.';
+COMMENT ON COLUMN aud_modul.mod_desc IS 'Descripcion del mÛdulo que aparecer· en la aplicaciÛn de auditoria.';
 
 
 --
@@ -315,7 +315,7 @@ COMMENT ON COLUMN aud_modul.mod_desc IS 'Descripcion del m√≥dulo que aparecer√° 
 -- Name: COLUMN aud_modul.mod_orden; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_modul.mod_orden IS 'Orden en el que aparecer√° el m√≥dulo en la aplicaci√≥n de auditor√≠a';
+COMMENT ON COLUMN aud_modul.mod_orden IS 'Orden en el que aparecer· el mÛdulo en la aplicaciÛn de auditorÌa';
 
 
 --
@@ -324,7 +324,7 @@ COMMENT ON COLUMN aud_modul.mod_orden IS 'Orden en el que aparecer√° el m√≥dulo 
 -- Name: COLUMN aud_modul.mod_descca; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_modul.mod_descca IS 'Descripcion del m√≥dulo que aparecer√° en la aplicaci√≥n de auditoria.';
+COMMENT ON COLUMN aud_modul.mod_descca IS 'Descripcion del mÛdulo que aparecer· en la aplicaciÛn de auditoria.';
 
 
 --
@@ -389,7 +389,7 @@ COMMENT ON COLUMN aud_tipoev.tip_tipo IS 'TIPO DE EVENTO';
 -- Name: COLUMN aud_tipoev.tip_modul; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_tipoev.tip_modul IS 'IDENTIFICADOR DEL M√ìDULO';
+COMMENT ON COLUMN aud_tipoev.tip_modul IS 'IDENTIFICADOR DEL M”DULO';
 
 
 --
@@ -416,7 +416,7 @@ COMMENT ON COLUMN aud_tipoev.tip_desc IS 'DESCRIPCION EVENTO';
 -- Name: COLUMN aud_tipoev.tip_orden; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_tipoev.tip_orden IS 'ORDEN DE PRESENTACI√ìN DENTRO DE SU M√ìDULO, EN EL FRONT DE AUDITORIA';
+COMMENT ON COLUMN aud_tipoev.tip_orden IS 'ORDEN DE PRESENTACI”N DENTRO DE SU M”DULO, EN EL FRONT DE AUDITORIA';
 
 
 --
@@ -430,7 +430,7 @@ T: INDICA QUE SE QUIERE VISUALIZAR EL NUMERO DE EVENTOS DEL EVENTO EN CUESTION
 I: INDICA QUE SE QUIERE VISUALIZAR EL TOTAL POR IDIOMA
 N: INDICA QUE SE QUIERE VISUALIZAR EL TOTAL POR NIVEL DE AUTENTICACION
 D:INDICA QUE SE QUIERE MOSTRAR EL DETALLE DEL EVENTO EN QUESTION
-G: INDICA QUE SE QUIERE MOSTRAR UN GR√ÅFICO DEL EVENTO EN QUESTION
+G: INDICA QUE SE QUIERE MOSTRAR UN GR¡FICO DEL EVENTO EN QUESTION
 X: INDICA QUE EL EVENTO EN QUESTION TIENE VISUALIZACION PARTICULAR (PERMITE INTRODUCIR HTML LIBRE) 
 ';
 
@@ -441,7 +441,7 @@ X: INDICA QUE EL EVENTO EN QUESTION TIENE VISUALIZACION PARTICULAR (PERMITE INTR
 -- Name: COLUMN aud_tipoev.tip_handlr; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_tipoev.tip_handlr IS 'NOMBRE DE LA CLASE JAVA HANDLER PARA GESTIONAR CARACTER√çSTICAS ESPECIALES DEL TIPO DE EVENTO AUDITADO (TEXTO PARTICULARIZADO, DETALLE, GRAFICO,...)
+COMMENT ON COLUMN aud_tipoev.tip_handlr IS 'NOMBRE DE LA CLASE JAVA HANDLER PARA GESTIONAR CARACTERÕSTICAS ESPECIALES DEL TIPO DE EVENTO AUDITADO (TEXTO PARTICULARIZADO, DETALLE, GRAFICO,...)
 ';
 
 
@@ -451,7 +451,7 @@ COMMENT ON COLUMN aud_tipoev.tip_handlr IS 'NOMBRE DE LA CLASE JAVA HANDLER PARA
 -- Name: COLUMN aud_tipoev.tip_ayuda; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_tipoev.tip_ayuda IS 'TEXTO DE AYUDA QUE APARECER√Å EN EL FRONT DE AUDITORIA.';
+COMMENT ON COLUMN aud_tipoev.tip_ayuda IS 'TEXTO DE AYUDA QUE APARECER¡ EN EL FRONT DE AUDITORIA.';
 
 
 --
@@ -469,7 +469,7 @@ COMMENT ON COLUMN aud_tipoev.tip_descca IS 'DESCRIPCION EVENTO';
 -- Name: COLUMN aud_tipoev.tip_ayudac; Type: COMMENT; Schema: public; Owner: sistra
 --
 
-COMMENT ON COLUMN aud_tipoev.tip_ayudac IS 'TEXTO DE AYUDA QUE APARECER√Å EN EL FRONT DE AUDITORIA.';
+COMMENT ON COLUMN aud_tipoev.tip_ayudac IS 'TEXTO DE AYUDA QUE APARECER¡ EN EL FRONT DE AUDITORIA.';
 
 
 --
@@ -530,18 +530,6 @@ ALTER TABLE ONLY aud_audit
 
 ALTER TABLE ONLY aud_tipoev
     ADD CONSTRAINT aud_tipmod_fk FOREIGN KEY (tip_modul) REFERENCES aud_modul(mod_modul);
-
-
---
--- TOC entry 1804 (class 0 OID 0)
--- Dependencies: 3
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 -- Completed on 2014-01-27 08:29:11

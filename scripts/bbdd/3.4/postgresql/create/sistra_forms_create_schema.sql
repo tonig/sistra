@@ -1762,18 +1762,6 @@ ALTER TABLE ONLY rfr_trvapo
     ADD CONSTRAINT rfr_vaptrv_fk FOREIGN KEY (trv_codvap) REFERENCES rfr_valpos(vap_codi);
 
 
---
--- TOC entry 2074 (class 0 OID 0)
--- Dependencies: 3
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
 -- Completed on 2014-01-27 09:07:08
 
 --

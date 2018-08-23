@@ -1,4 +1,4 @@
-ï»¿INSERT INTO SC_WL_USUARI (USU_CODI, USU_PASS, USU_NOM, USU_NIF) 
+INSERT INTO SC_WL_USUARI (USU_CODI, USU_PASS, USU_NOM, USU_NIF) 
 VALUES ( 'admin', 'admin' , 'Usuario administrador' ,null );
 
 INSERT INTO SC_WL_USUARI (USU_CODI, USU_PASS, USU_NOM, USU_NIF) 
@@ -14,7 +14,7 @@ INSERT INTO SC_WL_USUARI (USU_CODI, USU_PASS, USU_NOM, USU_NIF)
 VALUES ( 'auto', 'auto' , 'Usuario procesos automaticos' ,null );
 
 INSERT INTO SC_WL_USUARI (USU_CODI, USU_PASS, USU_NOM, USU_NIF) 
-VALUES ( 'demo', 'demo' , 'Jose GarcÃ­a GarcÃ­a' ,'12345678Z' );
+VALUES ( 'demo', 'demo' , 'Jose García García' ,'12345678Z' );
 
 INSERT INTO SC_WL_USUARI (USU_CODI, USU_PASS, USU_NOM, USU_NIF) 
 VALUES ( 'delega', 'delega' , 'Administrador representaciones' ,null );
