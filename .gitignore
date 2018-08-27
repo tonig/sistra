@@ -4,3 +4,17 @@ target
 .settings
 /product/
 /bin/
+/moduls/modul-audita/moduls/persistence/src/es/caib/audita/persistence/ejb/Auditoria.properties
+/moduls/modul-audita/moduls/persistence/src/es/caib/audita/persistence/ejb/CuadroMandoInicio.properties
+/moduls/modul-audita/moduls/persistence/src/es/caib/audita/persistence/ejb/LoggerEvento.properties
+/.idea/.name
+/.idea/dbnavigator.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/SISTRA-3.iml
+/.idea/ant.xml
+/.idea/codeStyles/Project.xml
+/.idea/encodings.xml
+/lib/ojdbc14.jar
