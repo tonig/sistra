@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -12,6 +13,9 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
 import java.util.ResourceBundle;
+
+
+
 
 import javax.security.auth.callback.CallbackHandler;
 import javax.security.auth.login.LoginContext;
@@ -41,8 +45,10 @@ import es.caib.sistra.persistence.delegate.DelegateUtil;
 import es.caib.sistra.plugins.PluginFactory;
 import es.caib.sistra.plugins.login.PluginLoginIntf;
 import es.caib.util.CredentialUtil;
+import es.caib.util.DataUtil;
 import es.caib.util.UsernamePasswordCallbackHandler;
 import es.caib.zonaper.persistence.delegate.DelegatePADUtil;
+import es.caib.zonaper.persistence.delegate.PadDelegate;
 
 
 public class FormularioIncidenciaservlet extends HttpServlet
@@ -57,8 +63,8 @@ public class FormularioIncidenciaservlet extends HttpServlet
 	private static String plantillaHtml = null;
 	
 	private static String[] camposFormulario = { "tramiteDesc", "tramiteId",
-			"procedimientoId", "fechaCreacion", "idPersistencia", "nif",
-			"nombre", "telefono", "email","procedimientoSelec", "problemaTipo", "problemaDesc" };	 
+			"procedimientoId", "fechaCreacion", "idPersistencia","nivelAutenticacion", "nif",
+			"nombre", "telefono", "email","horarioContacto","procedimientoSelec", "problemaTipo", "problemaDesc" };	 
 	
 	public void init() {
 		// Inicializa props
@@ -127,11 +133,20 @@ public class FormularioIncidenciaservlet extends HttpServlet
 				procedimiento = paramString.get("procedimientoId");
 			} else if (StringUtils.isNotBlank(paramString.get("procedimientoSelec"))){
 				procedimiento = paramString.get("procedimientoSelec");
-			}
-			
+			}			
 			
 			String textoHtml = construyeMensajeHtml(lang, paramString);
 			List<String> destinatarios = getDestinatarios(destinatariosProp, procedimiento, paramString.get("problemaTipo"));
+			
+			String paramValue = paramString.get("problemaTipo");	
+			if (StringUtils.isNotBlank(paramValue)){
+				titulo = titulo + " - " + getDescIncidencia(lang, paramValue);
+			}
+			
+			if (StringUtils.isNotBlank(procedimiento)){
+				titulo = titulo + " - " + procedimiento;
+			}
+			
 			if (destinatarios.size() == 0) {
 				throw new Exception("No se ha especificado lista de destinatarios");
 			}
@@ -246,7 +261,12 @@ public class FormularioIncidenciaservlet extends HttpServlet
 		}				
 		
 		String mensaje = getPlantilla();
-		mensaje = StringUtils.replace(mensaje, "[#TITULO#]", getLiteral(lang, "incidencias.email.titulo"));
+		String paramValue = paramString.get("problemaTipo");
+		if (StringUtils.isNotBlank(paramValue)){
+			paramValue = getDescIncidencia(lang, paramValue);
+		}
+		String titulo = getLiteral(lang, "incidencias.email.titulo") + " - " + paramValue;
+		mensaje = StringUtils.replace(mensaje, "[#TITULO#]", titulo);
 		mensaje = StringUtils.replace(mensaje, "[#CONTENIDO#]", listaCampos);
 		
 		return mensaje;
@@ -258,6 +278,10 @@ public class FormularioIncidenciaservlet extends HttpServlet
 		if (StringUtils.isNotBlank(paramValue)) {
 			if ("problemaTipo".equals(paramName)) {
 				paramValue = getDescIncidencia(lang, paramValue);
+			}
+			
+			if ("nivelAutenticacion".equals(paramName)) {
+				paramValue = getDescNivelesAutenticacion(lang, paramValue);
 			}
 			
 			if ("procedimientoSelec".equals(paramName)) {
@@ -279,6 +303,11 @@ public class FormularioIncidenciaservlet extends HttpServlet
 			HttpServletResponse response) throws ServletException, IOException {
 		// - Idioma
 		String lang = "ca";
+		Date fechaLimite = null;
+		int dias = Integer.parseInt(StringUtils.defaultIfEmpty(propiedadesConfiguracion.getProperty("incidencias.dias"), "0"));
+		if (dias > 0){
+			fechaLimite = DataUtil.sumarDias(new Date(), dias * -1);
+		}
 		if (request.getParameter("lang") != null) {
 			lang = request.getParameter("lang");
 		}
@@ -292,7 +321,8 @@ public class FormularioIncidenciaservlet extends HttpServlet
 		try {
 			PluginLoginIntf plgLogin = PluginFactory.getInstance().getPluginLogin();	
 			if (StringUtils.isEmpty(request.getParameter("procedimientoId")) && plgLogin.getMetodoAutenticacion(request.getUserPrincipal()) != CredentialUtil.NIVEL_AUTENTICACION_ANONIMO) {			
-				List procedimientos = DelegatePADUtil.getPadDelegate().obtenerProcedimientosUsuario(lang);
+				PadDelegate pad = DelegatePADUtil.getPadDelegate();
+				List procedimientos = pad.obtenerProcedimientosUsuario(lang, fechaLimite);
 				request.setAttribute("mostrarListaProcedimientos", "S");
 				request.setAttribute("listaProcedimientos", procedimientos);
 			}
@@ -324,6 +354,10 @@ public class FormularioIncidenciaservlet extends HttpServlet
 	
 	private String getDescIncidencia(String lang, String tipoIncidencia){
 		return propiedadesConfiguracion.getProperty("incidencias." + tipoIncidencia + "." + lang);
+	}
+	
+	private String getDescNivelesAutenticacion(String lang, String nivelAutenticacion){
+		return getLiteral(lang, "incidencias.nivelesAutenticacion." + nivelAutenticacion);
 	}
 	
 	private String getLiteral(String lang, String codLiteral) {

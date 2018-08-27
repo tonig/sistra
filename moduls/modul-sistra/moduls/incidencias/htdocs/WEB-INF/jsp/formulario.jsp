@@ -42,6 +42,12 @@ function validaFormulario( form )
 			}
 		}
 		
+		if (form.horarioContacto.value == null || form.horarioContacto.value == '' ){
+			alert( "<fmt:message key="incidencias.horarioContactoVacio"/>" );	
+			form.horarioContacto.focus();
+			return false;
+		}
+		
 		if ( form.problemaDesc.value == null || form.problemaDesc.value == '' ){
 			alert( "<fmt:message key="incidencias.descripcionVacia"/>" );	
 			form.problemaDesc.focus();
@@ -71,6 +77,7 @@ function validaFormulario( form )
 		  		<input name="procedimientoId" type="hidden" value="${param.procedimientoId}"/>
 		  		<input name="fechaCreacion" type="hidden" value=" ${param.fechaCreacion}"/>
 		  		<input name="idPersistencia" type="hidden" value="${param.idPersistencia}"/>
+		  		<input name="nivelAutenticacion" type="hidden" value="${param.nivelAutenticacion}"/>
 				<table>
 					<tbody>
 						<tr>
@@ -89,11 +96,15 @@ function validaFormulario( form )
 							<th>* <fmt:message key="incidencias.email"/></th>
 							<td><input name="email" type="text" value="" size="40"/></td>
 						</tr>
+						<tr>
+							<th>* <fmt:message key="incidencias.horarioContacto"/></th>
+							<td><input name="horarioContacto" type="text" value="" size="40"/></td>
+						</tr>
                 		<c:if test="${mostrarListaProcedimientos == 'S'}">
 						<tr>
 							<th>* <fmt:message key="incidencias.procedimientoSelec"/></th>
 							<td>
-								<select name="procedimientoSelec">
+								<select name="procedimientoSelec" style="width:272px;">
 										<c:forEach var="procedimiento" items="${listaProcedimientos}">
                         					<option value="${procedimiento.identificador}">
                         					${procedimiento.descripcion}

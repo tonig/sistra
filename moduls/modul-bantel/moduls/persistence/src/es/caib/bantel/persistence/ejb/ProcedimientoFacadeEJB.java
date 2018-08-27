@@ -37,6 +37,26 @@ public abstract class ProcedimientoFacadeEJB extends HibernateEJB {
 		super.ejbCreate();
 
 	}
+	
+	/**
+     * @ejb.interface-method
+     * @ejb.permission role-name="${role.auto}"
+     * @ejb.permission role-name="${role.admin}"
+     * @ejb.permission role-name="${role.todos}"
+     */
+    public Procedimiento obtenerProcedimiento(Long id) {
+    	 Session session = getSession();
+         try {       	
+        	// Cargamos tramite        	
+         	Procedimiento tramite = (Procedimiento) session.load(Procedimiento.class, id);
+
+             return tramite;
+         } catch (HibernateException he) {
+             throw new EJBException(he);
+         } finally {
+             close(session);
+         }
+    }  
 	  
     /**
      * @ejb.interface-method
@@ -68,24 +88,24 @@ public abstract class ProcedimientoFacadeEJB extends HibernateEJB {
      * @ejb.permission role-name="${role.admin}"
      * @ejb.permission role-name="${role.auto}"
      */
-    public String grabarProcedimiento(Procedimiento obj) {        
+    public Long grabarProcedimiento(Procedimiento obj) {        
     	Session session = getSession();
         try {
         	
-        	Procedimiento tramite = obtenerProcedimiento(obj.getIdentificador()); 
-        	if ( tramite == null )
+        	if ( obj.getCodigo() == null )
         	{
         		session.save( obj );
         	}
         	else
         	{
+        		Procedimiento tramite = obtenerProcedimiento(obj.getCodigo());
         		// Protegemos la fecha del ultimo aviso
         		obj.setUltimoAviso(tramite.getUltimoAviso());
         		// Update
         		session.update( obj );
         	}
         	//session.saveOrUpdate(obj);
-        	return obj.getIdentificador();
+        	return obj.getCodigo();
         } catch (HibernateException he) {
             throw new EJBException(he);
         } finally {        	
@@ -97,7 +117,7 @@ public abstract class ProcedimientoFacadeEJB extends HibernateEJB {
      * @ejb.interface-method
      * @ejb.permission role-name="${role.admin}"
      */
-    public void borrarProcedimiento(String id) {
+    public void borrarProcedimiento(Long id) {
         Session session = getSession();
         try {
         	Procedimiento tramite = (Procedimiento) session.load(Procedimiento.class, id);
@@ -113,6 +133,7 @@ public abstract class ProcedimientoFacadeEJB extends HibernateEJB {
      * @ejb.interface-method
      * @ejb.permission role-name="${role.admin}"
      * @ejb.permission role-name="${role.auto}"
+     * @ejb.permission role-name="${role.todos}"
      */
     public List listarProcedimientos()
     {
@@ -137,6 +158,7 @@ public abstract class ProcedimientoFacadeEJB extends HibernateEJB {
      * @ejb.interface-method
      * @ejb.permission role-name="${role.admin}"
      * @ejb.permission role-name="${role.auto}"
+     * @ejb.permission role-name="${role.todos}"
      */
     public List listarProcedimientos(String filtro)
     {
@@ -217,12 +239,12 @@ public abstract class ProcedimientoFacadeEJB extends HibernateEJB {
      * @ejb.interface-method
      * @ejb.permission role-name="${role.admin}"
      */
-    public boolean puedoBorrarProcedimiento(String id) {
+    public boolean puedoBorrarProcedimiento(Long id) {
 		Session session = getSession();    	    	    	
     	try {        	        	
 	    	
 	    	// Comprueba si hay entradas de este tramtie        	
-	    	Query query = session.createQuery("SELECT COUNT(*) FROM TramiteBandeja AS t WHERE t.procedimiento.identificador = :id");            
+	    	Query query = session.createQuery("SELECT COUNT(*) FROM TramiteBandeja AS t WHERE t.procedimiento.codigo = :id");            
 	        query.setParameter("id", id);
 	        if (Long.parseLong(query.uniqueResult().toString()) > 0) return false;            
 	                    

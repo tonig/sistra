@@ -36,6 +36,10 @@
 					<td><bean:write name="pago" property="tasa"/></td>
 				</tr>
 				<tr>
+					<th><bean:message key="detallePago.datosPago.importe"/></th>
+					<td><bean:write name="pago" property="importe"/></td>
+				</tr>
+				<tr>
 					<th><bean:message key="detallePago.datosPago.estadoPlataforma"/></th>
 					<td>
 						<logic:equal name="pago" property="estadoPlataforma" value='<%= Constants.XMLPAGO_CONFIRMADO %>'>
@@ -47,12 +51,18 @@
 						<logic:equal name="pago" property="estadoPlataforma" value='<%= Constants.XMLPAGO_PENDIENTE_CONFIRMAR %>'>
 							<bean:message key="detallePago.datosPago.plataforma.estado.pendiente"/>	
 						</logic:equal>
+						<logic:equal name="pago" property="estadoPlataforma" value='<%= Constants.XMLPAGO_EN_CURSO %>'>
+							<bean:message key="detallePago.datosPago.plataforma.estado.enCurso"/>	
+						</logic:equal>
+						<logic:equal name="pago" property="estadoPlataforma" value='<%= Constants.XMLPAGO_TIEMPO_EXCEDIDO %>'>
+							<bean:message key="detallePago.datosPago.plataforma.estado.tiempoExcedido"/>	
+						</logic:equal>
 					</td>
 				</tr>
 			
 				<logic:equal name="pago" property="estadoPlataforma" value='<%= Constants.XMLPAGO_CONFIRMADO %>'>
 				<tr>
-						<th><bean:message key="detallePago.datosPago.tipo"/></th>
+					<th><bean:message key="detallePago.datosPago.tipo"/></th>
 					<td>					
 							<logic:equal name="pago" property="tipo" value='<%= Character.toString(Constants.PRESENCIAL) %>'>
 								<bean:message key="detallePago.datosPago.tipo.presencial"/>	
@@ -119,6 +129,7 @@
 					<th><bean:message key="detallePago.asistentePago.localizador"/></th>
 					<td><bean:write name="pago" property="localizador"/></td>
 				</tr>
+				
 			</tbody>
 			</table>
 			</logic:present>

@@ -90,6 +90,7 @@ import es.caib.sistra.persistence.plugins.DestinatarioTramite;
 import es.caib.sistra.persistence.plugins.PluginDatosInteresadoDesglosado;
 import es.caib.sistra.persistence.plugins.PluginFormularios;
 import es.caib.sistra.persistence.plugins.PluginPagos;
+import es.caib.sistra.persistence.plugins.ProcedimientoDestinoTramite;
 import es.caib.sistra.persistence.util.GeneradorAsiento;
 import es.caib.sistra.persistence.util.Literales;
 import es.caib.sistra.persistence.util.ScriptUtil;
@@ -1201,6 +1202,10 @@ public class TramiteProcessorEJB implements SessionBean {
 	    					SesionSistra ss = new SesionSistra();
 	    	        		ss.setUrlMantenimientoSesionSistra(urlMantenimientoSesion);
 	    	        		ss.setUrlRetornoSistra(urlRetorno);
+	    	        		ss.setNivelAutenticacion(Character.toString(this.datosSesion.getNivelAutenticacion()));
+	    	        		ss.setNifUsuario(this.datosSesion.getNifUsuario());
+	    	        		ss.setNombreCompletoUsuario(this.datosSesion.getNombreCompletoUsuario());
+	    	        		ss.setCodigoUsuario(this.datosSesion.getCodigoUsuario());
 	    	        		SesionPago sesionPago = PluginFactory.getInstance().getPluginPagos(docNivel.getPagoPlugin()).reanudarSesionPago(datosPago.getLocalizador(),ss);
 	    	        		// Devolvemos indicando la url de redireccion
 	    	        		param.put("urlsesionpago",sesionPago.getUrlSesionPago());
@@ -1312,6 +1317,10 @@ public class TramiteProcessorEJB implements SessionBean {
 	        		SesionSistra ss = new SesionSistra();
 	        		ss.setUrlMantenimientoSesionSistra(urlMantenimientoSesion);
 	        		ss.setUrlRetornoSistra(urlRetorno);
+	        		ss.setNivelAutenticacion(Character.toString(this.datosSesion.getNivelAutenticacion()));
+	        		ss.setNifUsuario(this.datosSesion.getNifUsuario());
+	        		ss.setNombreCompletoUsuario(this.datosSesion.getNombreCompletoUsuario());
+	        		ss.setCodigoUsuario(this.datosSesion.getCodigoUsuario());
 
 	        		SesionPago sesionPago = PluginFactory.getInstance().getPluginPagos(docNivel.getPagoPlugin()).iniciarSesionPago(dp,ss);
 
@@ -2815,6 +2824,35 @@ public class TramiteProcessorEJB implements SessionBean {
     	}
 
     }
+    
+    /**
+     * Recupera DocumentoRDS a partir del idDocumento y el número de instancia
+     *
+     * @ejb.interface-method
+     * @ejb.permission role-name="${role.todos}"
+     *
+     * @param idDocumento
+     * @param instancia
+     * @return
+     */
+    public DocumentoRDS recuperaInfoDocumento( String idDocumento, int instancia )
+    {
+    	try
+    	{
+    		// Consultamos documento formateado al RDS
+    		DocumentoPersistentePAD docPAD = (DocumentoPersistentePAD) this.tramitePersistentePAD.getDocumentos().get(idDocumento + "-" + instancia);
+    		ReferenciaRDS refRds = docPAD.getRefRDS();
+
+    		RdsDelegate rds = DelegateRDSUtil.getRdsDelegate();
+    		DocumentoRDS docRds = rds.consultarDocumento(refRds,false);
+    		return docRds;
+
+    	}catch (Exception e){
+    		log.error("Excepción al recuperar documento " + idDocumento + " instancia " + instancia,e);
+    		throw new EJBException("Excepción al recuperar documento " + idDocumento + " instancia " + instancia,e);
+    	}
+
+    }
 
     /**
      * Muestra XML del formulario para debug
@@ -3602,7 +3640,7 @@ public class TramiteProcessorEJB implements SessionBean {
 	    	tramitePersistentePAD.setFechaCaducidad(this.getFechaCaducidad());
 
 	    	// Calculamos destinatario tramite por si se especifica procedimiento dinamicamente
-	    	DestinatarioTramite dt = calcularDestinatarioTramite();
+	    	ProcedimientoDestinoTramite dt = calcularProcedimientoDestinoTramite();
 	    	tramitePersistentePAD.setIdProcedimiento(dt.getProcedimiento());
 
 	    	// Guardamos documentos
@@ -5575,11 +5613,13 @@ public class TramiteProcessorEJB implements SessionBean {
     	}
 
     	DestinatarioTramite destTra = new DestinatarioTramite();
+    	ProcedimientoDestinoTramite procDest = this.calcularProcedimientoDestinoTramite();
+    	
     	destTra.setCalculado(false);
     	destTra.setOficinaRegistral(tramiteVersion.getRegistroOficina());
     	destTra.setOrganoDestino(tramiteVersion.getOrganoDestino());
     	destTra.setUnidadAdministrativa(tramiteVersion.getUnidadAdministrativa().toString());
-    	destTra.setProcedimiento(tramiteVersion.getTramite().getProcedimiento());
+    	destTra.setProcedimiento(procDest.getProcedimiento());
 
 		if (scriptDestinatario != null && scriptDestinatario.length>0){
 			// Realizamos calculo destinatario
@@ -5604,6 +5644,39 @@ public class TramiteProcessorEJB implements SessionBean {
 		}
 
 		return destTra;
+	}
+	
+	/**
+	 * Calcula dinámicamente el procedimiento destino tramite según script
+	 * @return
+	 */
+	private ProcedimientoDestinoTramite calcularProcedimientoDestinoTramite() throws Exception{
+		EspecTramiteNivel especVersion = tramiteVersion.getEspecificaciones();
+    	EspecTramiteNivel especNivel = tramiteVersion.getTramiteNivel(datosSesion.getNivelAutenticacion()).getEspecificaciones();
+
+    	byte scriptProcedimientoDestino[];
+    	if (especNivel.getDestinatarioTramite() != null && especNivel.getDestinatarioTramite().length > 0 ){
+    		scriptProcedimientoDestino = especNivel.getProcedimientoDestinoTramite();
+    	}else{
+    		scriptProcedimientoDestino = especVersion.getProcedimientoDestinoTramite();
+    	}
+
+    	ProcedimientoDestinoTramite procDestTra = new ProcedimientoDestinoTramite();
+    	procDestTra.setCalculado(false);
+    	procDestTra.setProcedimiento(tramiteVersion.getTramite().getProcedimiento());
+
+		if (scriptProcedimientoDestino != null && scriptProcedimientoDestino.length>0){
+			// Realizamos calculo destinatario
+			HashMap params = new HashMap();
+			params.put("PROCEDIMIENTO_DESTINO_TRAMITE",procDestTra);
+			this.evaluarScript(scriptProcedimientoDestino,params);
+
+			// Validamos resultado calculo
+			procDestTra.setCalculado(true);
+
+		}
+
+		return procDestTra;
 	}
 
 	private String obtenerEntidadProcedimiento(String idProcedimiento) throws Exception {

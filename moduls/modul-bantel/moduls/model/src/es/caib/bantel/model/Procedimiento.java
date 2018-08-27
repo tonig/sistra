@@ -24,8 +24,9 @@ public class Procedimiento extends Traducible implements Serializable{
 	public final static char AUTENTICACION_ESTANDAR 	= 'S';
 	public final static char AUTENTICACION_ORGANISMO 	= 'C';
 		
+	private Long codigo;
 	private String identificador;
-	//private String descripcion;
+
 	private String entidad;
 	private String idProcExt;
 	private char inmediata = 'N';
@@ -66,6 +67,14 @@ public class Procedimiento extends Traducible implements Serializable{
 	 * Indica email para envío de incidencias
 	 */
 	private String emailIncidencias;
+	
+
+	public Long getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 	
 	public String getIdentificador() {
 		return identificador;

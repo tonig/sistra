@@ -29,7 +29,7 @@
 			<p>
 				<bean:message key="resultadoBusqueda.numero.inicio"/> <strong><bean:write name="arraySize"/></strong> <bean:message key="resultadoBusqueda.numero.fin"/>
 			</p>
-			<table cellpadding="8" cellspacing="0" class="resultats">
+			<table cellpadding="9" cellspacing="0" class="resultats">
 			<thead>
 			<tr>
 				<th><bean:message key="resultadoBusqueda.fechaTramite"/></th>
@@ -41,7 +41,8 @@
 				<th><bean:message key="resultadoBusqueda.estado"/></th>	
 				<th><bean:message key="resultadoBusqueda.tipo"/></th>	
 				<th><bean:message key="resultadoBusqueda.fechaPago"/></th>				
-				<th><bean:message key="resultadoBusqueda.dui"/></th>				
+				<th><bean:message key="resultadoBusqueda.dui"/></th>
+				<th><bean:message key="resultadoBusqueda.importe"/></th>				
 			</tr>	
 			</thead>
 			<tbody>	
@@ -85,6 +86,12 @@
 						<logic:equal name="pago" property="estado" value='<%= Constants.XMLPAGO_PENDIENTE_CONFIRMAR %>'>
 							<bean:message key="resultadoBusqueda.estadoPago.iniciado"/>	
 						</logic:equal>
+						<logic:equal name="pago" property="estado" value='<%= Constants.XMLPAGO_EN_CURSO %>'>
+							<bean:message key="resultadoBusqueda.estadoPago.enCurso"/>	
+						</logic:equal>
+						<logic:equal name="pago" property="estado" value='<%= Constants.XMLPAGO_TIEMPO_EXCEDIDO %>'>
+							<bean:message key="resultadoBusqueda.estadoPago.tiempoExcedido"/>	
+						</logic:equal>
 						</strong>
 					</td>
 					<td>
@@ -99,6 +106,7 @@
 					</td>
 					<td><bean:write name="pago" property="fechaPago" format="dd/MM/yyyy HH:mm"/></td>					
 					<td><bean:write name="pago" property="dui"/></td>
+					<td><bean:write name="pago" property="importe"/></td>
 					
 				</tr>
 				</logic:iterate>														
