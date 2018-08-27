@@ -25,18 +25,19 @@
 	es.caib.zonaper.persistence.delegate.ConfiguracionDelegate delegateF = es.caib.zonaper.persistence.delegate.DelegateUtil.getConfiguracionDelegate();
 	java.util.Properties configProperties =  delegateF.obtenerConfiguracion();
 	String urlSistra = configProperties.getProperty("sistra.url");
+	String contextoFront = configProperties.getProperty("sistra.contextoRaiz.front");
 	es.caib.zonaper.model.OrganismoInfo infoOrg = delegateF.obtenerOrganismoInfo();
-	
+
 	// Idioma
 	language = request.getParameter("language");
 	if (language == null) {
-		language = request.getParameter("lang");			
+		language = request.getParameter("lang");
 	}
-	if (language == null) {			
+	if (language == null) {
 		language = "es";
 	}
 	request.setAttribute("lang", language);
-	
+
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
@@ -59,18 +60,18 @@ function ocultarAyudaAdmin() {
 
 // Abre pantalla de ayuda
 function mostrarAyudaAdmin() {
-	
-	
+
+
 	var capaI = document.getElementById('contactoAdministrador');
 
 
-	
+
 	// tama?os de la ventana y la p?gina
 	var ventanaX = document.documentElement.clientWidth;
 	var ventanaY = document.documentElement.clientHeight;
 	var capaY = document.getElementById('contenidor').offsetHeight;
-	
-/*	
+
+/*
 	// la capa de fondo ocupa toda la p?gina
 	with (capaIF) {
 		if(ventanaY > capaY) style.height = ventanaY + 'px';
@@ -79,11 +80,11 @@ function mostrarAyudaAdmin() {
 		else style.MozOpacity = 0.3;
 		if(document.all) style.width = ventanaX + 'px';
 		style.display = 'block';
-	}	
+	}
 	// OJO, descomentar si se quiere poder pulsar en cualquier parte de la pantalla
 	//capaIF.onclick = cerrarInfo;
-*/	
-	
+*/
+
 	// mostramos, miramos su tama?o y centramos la capaInfo con respecto a la ventana
 	capaI.style.display = 'block';
 	capaInfoX = capaI.offsetWidth;
@@ -92,8 +93,8 @@ function mostrarAyudaAdmin() {
 		style.left = (ventanaX-capaInfoX)/2 + 'px';
 		style.top = (((ventanaY-capaInfoY)/2)+ document.documentElement.scrollTop) + 'px';
 	}
-	
-	
+
+
 }
 -->
 </script>
@@ -134,13 +135,13 @@ else browser = "An unknown browser";
 
 if (!version) {
 	aux = detect.substring(place + thestring.length);
-		
+
 	posDecimal = aux.indexOf('.');
 	version = aux.substring(0, posDecimal);
 	do{
 	  version = version + '' + aux.charAt(posDecimal);
 	  posDecimal++;
-	}while (!isNaN(aux.charAt(posDecimal)) && posDecimal < aux.length);		
+	}while (!isNaN(aux.charAt(posDecimal)) && posDecimal < aux.length);
 }
 
 
@@ -171,21 +172,21 @@ if (browser == "Firefox" && parseFloat( version, 10) < 4 ){
 <%
 
 	//Si la url origen es loginClave.jsp, hacemos login automatico
-	if (esLoginClave) {		
+	if (esLoginClave) {
 		// Obtenemos ticket pasado por POST
 		String[] values = savedRequest.getParameterValues("ticket");
-		ticketClave = values[0];						
+		ticketClave = values[0];
 	} else {
 		// Url Callback
 		if (request.getContextPath().indexOf("zonaperfront") != -1) {
-			urlCallback = urlSistra + "/zonaperfront/protected/loginClave.jsp";
+			urlCallback = urlSistra + contextoFront + "/zonaperfront/protected/loginClave.jsp";
 		} else {
-			urlCallback = urlSistra + "/sistrafront/protected/loginClave.jsp";
+			urlCallback = urlSistra + contextoFront  + "/sistrafront/protected/loginClave.jsp";
 		}
 		// Metodos permitidos
 		metodos = niveles; // Ver metodos de autenticacion permitidos
-		// Url redireccion clave			
-		urlClave = urlSistra + "/apb-login/iniciarSesionClave.html";
+		// Url redireccion clave
+		urlClave = urlSistra + "/imilogin-front/iniciarSesionClave.html";
 		// Url destino
 		urlDestino = savedRequest.getRequestURI();
 		if (savedRequest.getQueryString() != null) {
