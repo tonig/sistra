@@ -1,14 +1,12 @@
 package es.caib.sistra.plugins.firma.impl.mock;
-
-import java.security.cert.X509Certificate;
-import java.util.Vector;
-
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERObjectIdentifier;
 import org.bouncycastle.asn1.x509.X509CertificateStructure;
 import org.bouncycastle.asn1.x509.X509Name;
 
+import java.security.cert.X509Certificate;
+import java.util.Vector;
 public class DatosCertificado {
 
 		private boolean personaFisica;
@@ -26,7 +24,7 @@ public class DatosCertificado {
 		private String policy;
 
 
-		public DatosCertificado(X509Certificate cert) throws Exception{
+		public DatosCertificado(X509Certificate cert) throws Exception {
 		        byte b[] = cert.getEncoded();
 		        ASN1InputStream asn1is = new ASN1InputStream(b);
 		        org.bouncycastle.asn1.DERObject obj = asn1is.readObject();
@@ -49,6 +47,10 @@ public class DatosCertificado {
 		            if(v.get(i).equals(X509Name.SN))
 		            {
 		                nif = value.get(i).toString();
+		                if (nif.contains("-")) {
+		                    //Formato IDCES-NIF/NIE
+		                    nif = nif.substring(nif.indexOf("-")+1);
+                        }
 		                if(!personaJuridica)
 		                    personaFisica = true;
 		            }

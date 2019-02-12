@@ -186,7 +186,7 @@ if (browser == "Firefox" && parseFloat( version, 10) < 4 ){
 		// Metodos permitidos
 		metodos = niveles; // Ver metodos de autenticacion permitidos
 		// Url redireccion clave
-		urlClave = urlSistra + "/imilogin-front/iniciarSesionClave.html";
+		urlClave = urlSistra + "/apblogin-front/iniciarSesionClave.html";
 		// Url destino
 		urlDestino = savedRequest.getRequestURI();
 		if (savedRequest.getQueryString() != null) {
@@ -363,6 +363,3 @@ if (browser == "Firefox" && parseFloat( version, 10) < 4 ){
 </div>
 </body>
 </html>
-
-
-

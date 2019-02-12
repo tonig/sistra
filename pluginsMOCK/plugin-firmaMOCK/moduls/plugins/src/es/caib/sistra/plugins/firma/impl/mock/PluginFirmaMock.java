@@ -1,16 +1,13 @@
 package es.caib.sistra.plugins.firma.impl.mock;
-
-import java.io.InputStream;
-import java.util.Map;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import es.caib.sistra.plugins.firma.FicheroFirma;
 import es.caib.sistra.plugins.firma.FirmaIntf;
 import es.caib.sistra.plugins.firma.PluginFirmaIntf;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
-public class PluginFirmaMock implements PluginFirmaIntf{
+import java.io.InputStream;
+import java.util.Map;
+public class PluginFirmaMock implements PluginFirmaIntf {
 	
 	private static Log log = LogFactory.getLog(PluginFirmaMock.class);
 	
@@ -18,14 +15,15 @@ public class PluginFirmaMock implements PluginFirmaIntf{
 	 * Obtiene proveedor
 	 */
 	public String getProveedor() {
-		return PluginFirmaIntf.PROVEEDOR_AFIRMA;
+        //return PluginFirmaIntf.PROVEEDOR_AFIRMA;
+        return PluginFirmaIntf.PROVEEDOR_FIRMAWEB;
 	}
 	
 	/**
 	 * Realiza firma
 	 */
-	public FirmaIntf firmar(InputStream datos,String nombreCertificado, Map parametros) throws Exception {
-		return UtilFirmaMock.firmar(datos,nombreCertificado,parametros);		
+	public FirmaIntf firmar(InputStream datos, String nombreCertificado, Map parametros) throws Exception {
+		return UtilFirmaMock.firmar(datos,nombreCertificado,parametros);
 	}
 
 	/**
@@ -39,9 +37,22 @@ public class PluginFirmaMock implements PluginFirmaIntf{
 	 * Parsea la firma proveniente del html
 	 */
 	public FirmaIntf parseFirmaFromHtmlForm(String signatureHtmlForm) throws Exception {
+        // Devolvemos firma
+        String signatureDataStr = UtilFirmaMock.unescapeChars64UrlSafe(signatureHtmlForm);
+        byte[] aBytPKCS7 = Utilidades.Base64toBytes(signatureDataStr);
+        String fullString = new String(aBytPKCS7);
+
+        if (fullString.contains("CAIB_BOUNDARY_")) {
+            int lastBoundary = fullString.lastIndexOf("------CAIB_BOUNDARY_");
+            fullString = fullString.substring(0, lastBoundary);
+            lastBoundary = fullString.lastIndexOf("------CAIB_BOUNDARY_");
+            int startContent = fullString.indexOf("\r\n\r\n", lastBoundary);
+            signatureDataStr = fullString.substring(startContent).trim();
+        }
+
 		// Devolvemos firma
 		FirmaMock firma = new FirmaMock();
-		firma.setSignature(UtilFirmaMock.unescapeChars64UrlSafe(signatureHtmlForm));
+		firma.setSignature(signatureDataStr);
 		firma.setFormato("CMS");
 		return firma;
 	}
@@ -60,7 +71,7 @@ public class PluginFirmaMock implements PluginFirmaIntf{
 	/**
 	 * Serializa firma para ser almacenada como un conjunto de bytes
 	 */
-	public byte[] parseFirmaToBytes(FirmaIntf firma)  throws Exception {		
+	public byte[] parseFirmaToBytes(FirmaIntf firma)  throws Exception {
 		FirmaMock f = (FirmaMock) firma;
 		return f.getSignature().getBytes("UTF-8");		
 	}
@@ -68,7 +79,7 @@ public class PluginFirmaMock implements PluginFirmaIntf{
 	/**
 	 * Genera fichero con la firma. Creamos un fic de texto con la firma.
 	 */
-	public FicheroFirma parseFirmaToFile(InputStream datosFirmados,FirmaIntf firma)  throws Exception {
+	public FicheroFirma parseFirmaToFile(InputStream datosFirmados, FirmaIntf firma)  throws Exception {
 		// Devolvemos fichero
 		byte[] data = ((FirmaMock) firma).getSignature().getBytes("UTF-8");
 		FicheroFirma fic = new FicheroFirma();
